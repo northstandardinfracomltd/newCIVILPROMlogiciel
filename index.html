@@ -2014,9 +2014,99 @@ width: 100%;
         }
       
       
+             .bando-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .bando-load-bar {
+            width: 0;
+            height: 3px;
+            background: #007bff;
+            transition: width 5s linear;
+        }
+        .bando-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #f8f9fa;
+        }
+        .bando-banner h2, .bando-banner p {
+            margin: 0;
+        }
+        .bando-banner-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .bando-banner button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .bando-banner button:hover {
+            background: #0056b3;
+        }
+      
     </style>
 </head>
 <body>
+  
+   <div class="bando-container">
+        <div class="bando-load-bar"></div>
+        <div class="bando-banner">
+            <div class="bando-banner-content">
+                <h2 id="bando-title">BLEU</h2>
+                <p id="bando-desc">Un bleu océan</p>
+            </div>
+            <a id="bando-link" href="https://bleu.com/" target="_blank">
+                <button>En savoir plus</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const slides = [
+            { title: "BLEU", desc: "Un bleu océan", link: "https://bleu.com/" },
+            { title: "ROUGE", desc: "Un rouge sang", link: "https://rouge.com/" }
+        ];
+        
+        let index = 0;
+        const titleElement = document.getElementById("bando-title");
+        const descElement = document.getElementById("bando-desc");
+        const linkElement = document.getElementById("bando-link");
+        const loadBar = document.querySelector(".bando-load-bar");
+        
+        function updateBanner() {
+            titleElement.textContent = slides[index].title;
+            descElement.textContent = slides[index].desc;
+            linkElement.href = slides[index].link;
+        }
+        
+        function startAnimation() {
+            loadBar.style.transition = "none";
+            loadBar.style.width = "0";
+            setTimeout(() => {
+                loadBar.style.transition = "width 5s linear";
+                loadBar.style.width = "100%";
+            }, 50);
+            
+            setTimeout(() => {
+                index = (index + 1) % slides.length;
+                updateBanner();
+            }, 4500);
+        }
+        
+        updateBanner();
+        setTimeout(startAnimation, 100);
+        setInterval(startAnimation, 5000);
+    </script>
   
     <div class="sticky-cta-bar" id="maDiv">
       <div class="cta-text">
