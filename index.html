@@ -85,18 +85,22 @@
             height: 20px;
         }
         .sticky-footer {
-            background: white;
-            padding: 15px;
-            border-top: 1px solid #ccc;
-            display: flex;
-            flex-direction: column;
-            position: sticky;
-            bottom: 0;
-        }
+    background: #232325;
+    padding: 15px;
+    border-top: none;
+    display: flex
+;
+    flex-direction: column;
+    position: sticky;
+    bottom: 0;
+    margin-top: -1px;
+    border-radius: 0px 0px 18px 18px;
+}
         .step1-buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
         }
         .step1-buttons button {
             display: flex;
@@ -106,9 +110,26 @@
             border: none;
             border-radius: 20px;
             cursor: pointer;
-            background: #007bff;
             color: white;
         }
+      
+             .cage1 {
+     background: green;
+      }
+      
+                 .cage2 {
+     background: yellow;
+      }
+      
+                 .cage3 {
+     background: red;
+      }
+      
+                 .cage4 {
+     background: blue;
+      }
+
+      
         .step1-buttons button img {
             width: 20px;
             height: 20px;
@@ -222,13 +243,28 @@
  
 
       .chat-bubble.right {
+        
+    background-color: #9034e517;
+    color: #fff !important;
+    padding: 8px 20px 7px 20px !important;
+    border: 1px solid #9034e54a !important;
+    cursor: pointer !important;
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 22px !important;
+    border-radius: 15px !important;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+    height: 54px !important;
+        
+        
           margin-left: auto;
     max-width: 70%; /* Empêche une bulle trop large */
     width: fit-content; /* Ajuste la largeur en fonction du texte */
-    padding: 10px 15px; /* Ajoute un peu d’espace autour du texte */
     background: #e7ff7a;
-    color: white;
-    border-radius: 15px;
     align-self: flex-end !important;
     word-wrap: break-word; /* Permet le retour à la ligne si nécessaire */
     white-space: pre-wrap; /* Préserve les espaces et sauts de ligne */
@@ -1949,6 +1985,9 @@ width: 100%;
         cursor: pointer;
         transition-duration: 0s;
       }
+      
+     
+      
 
       .footer-containerX2 {
         display: grid;
@@ -2198,21 +2237,35 @@ width: 100%;
           
           
     <div class="step1-buttons" id="step1">
-    <button onclick="selectChoice('Choix1', 'Lorem ipsum dolor sit amet.', this)">
+
+      
+
+      
+                <button class="cage1" onclick="selectChoice('Choix1', 'Lorem ipsum dolor sit amet.', this)">
         <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
         <div>
             <strong>Choix1</strong><br>
             <small>Lorem ipsum dolor sit amet.</small>
         </div>
     </button>
-    <button onclick="selectChoice('Choix2', 'Consectetur adipiscing elit.', this)">
+      
+                <button class="cage2" onclick="selectChoice('Choix1', 'Lorem ipsum dolor sit amet.', this)">
+        <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
+        <div>
+            <strong>Choix1</strong><br>
+            <small>Lorem ipsum dolor sit amet.</small>
+        </div>
+    </button>
+      
+      
+    <button class="cage3" onclick="selectChoice('Choix2', 'Consectetur adipiscing elit.', this)">
         <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
         <div>
             <strong>Choix2</strong><br>
             <small>Consectetur adipiscing elit.</small>
         </div>
     </button>
-    <button onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
+    <button class="cage4" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
         <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
         <div>
             <strong>Choix3</strong><br>
