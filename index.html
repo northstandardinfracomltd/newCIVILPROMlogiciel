@@ -114,19 +114,19 @@
         }
       
              .cage1 {
-     background: green;
+     background: -webkit-linear-gradient(70deg, #703cac, #b37cf1);
       }
       
                  .cage2 {
-     background: yellow;
+     background: -webkit-linear-gradient(70deg, #119a7a, #19d4a7);
       }
       
                  .cage3 {
-     background: red;
+     background: -webkit-linear-gradient(222deg, #ff8d90, #EE0007);
       }
       
                  .cage4 {
-     background: blue;
+     background: -webkit-linear-gradient(20deg, #D64C81, #FF86B4);
       }
 
       
@@ -1294,11 +1294,12 @@ text-align: center;
     top: 0;
     z-index: 29929229;
     background: #320e5300;
-    border-radius: 0px 0px 20px 20px;
-               margin-bottom: -55px;
-               padding-top: 10px;
-            }
-      
+    border-radius: 0px;
+    padding-top: 10px;
+               margin-top: 50px;
+               margin-bottom: 50px !important;
+    border-bottom: 1px solid #ffffff1c;
+       }
                     .principale {
             display: flex;
             align-items: center;
@@ -2035,6 +2036,7 @@ width: 100%;
             grid-template-columns: 1fr 1fr; /* Deux colonnes de taille égale */
             gap: 20px; /* Espacement entre les colonnes */
             padding: 20px;
+                    margin-top: 50px;
         }
 
         .grid-itemEDIX {
@@ -2206,7 +2208,7 @@ width: 100%;
         <img src="https://cdn.glitch.global/ed6d3a94-d4f7-4c82-979b-d9b8dc65e8cc/Capture%20d%E2%80%99e%CC%81cran%202025-02-02%20a%CC%80%2023.20.20.png?v=1738935252403" alt="Logo">
         <div class="right-button">
           <a href="/uk" class="cristalinefooterlink" >
-            <button class="CTAlog3">English UK</button></a>
+            <button class="CTAlog3">or go to .UK</button></a>
           <a href="https://wa.me/447723501018" class="cristalinefooterlink" target="_blank">
                       <button class="CTAlog2 science" >Ouvrir un chat avec un spécialiste</button></a>
             <button class="CTAlog science" onclick="openPopup()">Être rappelé</button>
@@ -2226,7 +2228,32 @@ width: 100%;
   
   <div class="grid-containerEDIX">
         <div class="grid-itemEDIX">
-    <h1 class="big-titleMAG">Un SaaS brillant pour une expérience fantastique</h1>
+    <h1 class="big-titleMAG">Un Sa</h1>
+          
+            
+<h2 class="text-block999MAG">SaaSduo construit des logiciels et des plateformes
+<span id="moreText2999wMAGsap" class="hidden">
+pour des missions critiques qui aident les PME, institutions et les leaders de l'industrie à prospérer — Nous concevons des expériences et des systèmes personnalisés de bout en bout ; pour centraliser les fonctionnalités et activités externes ou internes.
+</span>
+<a href="#" id="toggleBtn2999wMAGsap" class="fapy2">Lire la suite</a>
+</h2>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const toggleBtn2999wMAGsap = document.getElementById("toggleBtn2999wMAGsap");
+const moreText2999wMAGsap = document.getElementById("moreText2999wMAGsap");
+toggleBtn2999wMAGsap.addEventListener("click", function(event) {
+event.preventDefault();
+if (moreText2999wMAGsap.classList.contains("hidden")) {
+moreText2999wMAGsap.classList.remove("hidden");
+toggleBtn2999wMAGsap.textContent = "Réduire";
+} else {
+moreText2999wMAGsap.classList.add("hidden");
+toggleBtn2999wMAGsap.textContent = "Lire la suite";
+}
+});
+});
+</script> 
+  
     </div>
         <div class="grid-itemEDIX">
           <div class="container">
@@ -2572,7 +2599,7 @@ function showTypingEffect(text, callback) {
     let typingText = document.createElement('strong');
     let cursor = document.createElement('span');
     cursor.classList.add('cursor');
-    cursor.innerText = "|";
+    cursor.innerText = "";
 
     typingBubble.appendChild(typingText);
     typingBubble.appendChild(cursor);
@@ -2616,69 +2643,11 @@ function scrollToBottom() {
 
 
     </script>
+
   
-<h2 class="text-block999MAG">SaaSduo construit des logiciels et des plateformes
-<span id="moreText2999wMAGsap" class="hidden">
-pour des missions critiques qui aident les PME, institutions et les leaders de l'industrie à prospérer — Nous concevons des expériences et des systèmes personnalisés de bout en bout ; pour centraliser les fonctionnalités et activités externes ou internes.
-</span>
-<a href="#" id="toggleBtn2999wMAGsap" class="fapy2">Lire la suite</a>
-</h2>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-const toggleBtn2999wMAGsap = document.getElementById("toggleBtn2999wMAGsap");
-const moreText2999wMAGsap = document.getElementById("moreText2999wMAGsap");
-toggleBtn2999wMAGsap.addEventListener("click", function(event) {
-event.preventDefault();
-if (moreText2999wMAGsap.classList.contains("hidden")) {
-moreText2999wMAGsap.classList.remove("hidden");
-toggleBtn2999wMAGsap.textContent = "Réduire";
-} else {
-moreText2999wMAGsap.classList.add("hidden");
-toggleBtn2999wMAGsap.textContent = "Lire la suite";
-}
-});
-});
-</script> 
   
-<div class="FormBlock">
-<div class="FormField"><div class="FormFieldBlock"><input type="text" id="typingInput" class="dropdown-inputS" autofocus placeholder="Name your idea">
+  
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const input = document.getElementById('typingInput');
-    const placeholders = ["Indiquez un titre", "Indiquez une idée", "Indiquez un usage"];
-    let placeholderIndex = 0;
-    let charIndex = 0;
-    const typingSpeed = 100; // Speed of typing effect
-    const delayBetweenPlaceholders = 2000; // Delay before switching to the next placeholder
-
-    function type() {
-      if (charIndex < placeholders[placeholderIndex].length) {
-        input.placeholder = placeholders[placeholderIndex].substring(0, charIndex + 1);
-        charIndex++;
-        setTimeout(type, typingSpeed);
-      } else {
-        setTimeout(() => {
-          // Directly move to the next placeholder after delay
-          charIndex = 0;
-          placeholderIndex = (placeholderIndex + 1) % placeholders.length;
-          input.placeholder = ""; // Clear the placeholder immediately
-          setTimeout(type, typingSpeed); // Start typing the next placeholder
-        }, delayBetweenPlaceholders);
-      }
-    }
-
-    type();
-  });
-</script>
-
-
-  </div>
-<div class="FormFieldBlock FormFieldBlockXXX"><button class="FormButton science" onclick="openPopup()">Go</button></div>
-</div><div class="FormSuggest"><div class="Sugg" onclick="openPopup()"><div class="suggestion" onclick="openPopup()">ex. Logiciel d'infogérance (...)</div></div>          
-<div class="Sugg" onclick="openPopup()"><div class="suggestion" onclick="openPopup()">ex. Module de ressources (...)</div></div>          
-<div class="Sugg" onclick="openPopup()"><div class="suggestion" onclick="openPopup()">ex. Plateforme interactive (...)</div></div>      
-</div></div>
   
   
   
