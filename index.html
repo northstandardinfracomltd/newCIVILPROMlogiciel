@@ -61,7 +61,7 @@
                     padding: 7px;
         }
  .chat-display {
-   min-height: 60px;
+   min-height: 100px;
     flex: 1;
     padding: 10px;
     overflow-y: auto; /* Permet de faire défiler les bulles uniquement dans cette div */
@@ -73,25 +73,23 @@
 }
 
         .chat-bubble {
-          
-              font-family: "saasduoPAR" !important;
+    font-family: "saasduoPAR" !important;
     font-weight: 100 !important;
     letter-spacing: -0.2px !important;
     font-size: 18px !important;
-          
-    align-self: center !important;
+    cursor: default !important;
+    align-self: flex-start !important;
     word-wrap: break-word;
-    white-space: pre-wrap;
-          
-          
-            background: #ddd;
-            padding: 10px 15px;
-            border-radius: 15px;
-            margin-bottom: 10px;
-            max-width: 80%;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+    background: #000000;
+    padding: 12px 15px 11px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    display: flex;
+    color: white;
+    align-items: center;
+    gap: 10px;
+    margin-top: 45px;
         }
         .chat-bubble img {
             width: 20px;
@@ -2434,8 +2432,7 @@ toggleBtn2999wMAGsap.textContent = "Lire la suite";
     <script>
       
 
-     let step3Choices = [];
-
+let step3Choices = [];
 
 function selectChoice(choice, subtitle, button) {
     let iconSrc = button.querySelector('img').src;
@@ -2448,15 +2445,17 @@ function selectChoice(choice, subtitle, button) {
             </div>
         </div>`;
 
+    // Ajuste la min-height de .chat-display à 500px
+    document.querySelector('.chat-display').style.minHeight = '500px';
+
     // Masque Step 1 immédiatement
     document.getElementById('step1').style.display = 'none';
 
-setTimeout(() => {
-    showTypingEffect('Parfait! Indiquez moi un titre pour votre projet.', () => {
-        document.getElementById('step2').style.display = 'flex';
-    });
-}, 1000);
-
+    setTimeout(() => {
+        showTypingEffect('Parfait! Indiquez moi un titre pour votre projet.', () => {
+            document.getElementById('step2').style.display = 'flex';
+        });
+    }, 1000);
 }
 
   
