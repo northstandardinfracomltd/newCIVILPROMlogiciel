@@ -2057,86 +2057,57 @@ background-color: color(display-p3 0 0 0) !important;
                 grid-template-columns: 1fr; /* Une seule colonne */
             }
         }
-      
-      
-             .bando-container {
+            /* Conteneur de la barre */
+        .load-bar {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 1000;
-               background-color: color(display-p3 0 0 0) !important;
+            height: 2px;
+            overflow: hidden;
+            background: #4D9BFF; /* Première couleur de fond */
+        }
 
+        /* Barre animée avec effet de vagues successives */
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #FFB84D; /* Première vague qui recouvre */
+            animation: waveMove 3s linear infinite;
         }
-        .bando-load-bar {
-            width: 0;
-            height: 1.5px;
-            background: #e8ff7a;
-            transition: width 3s linear;
-        }
-        .bando-banner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: color(display-p3 0 0 0);
-          
-          
 
+        .wave:nth-child(2) {
+            background: #4DFF4D; /* Seconde vague qui recouvre */
+            animation-delay: 0.75s;
         }
-        .bando-banner h2, .bando-banner p {
-            margin: 0;
-            
-    font-size: 22px !important;
-    font-family: "saasduoPAR" !important;
-    letter-spacing: 0px;
-    color: #fff;
-    line-height: 26px;
-    font-weight: 500;
-    cursor: default;
+
+        .wave:nth-child(3) {
+            background: #FF4D4D; /* Troisième vague qui recouvre */
+            animation-delay: 1.5s;
         }
-        .bando-banner-content {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .bando-banner button {
-background-color: color(display-p3 0 0 0) !important;
-    color: #e8ff7a;
-    border: 1px solid #e8ff7a;
-    padding: 8px 15px;
-    cursor: pointer;
-    font-family: "saasduoPAR" !important;
-    font-weight: 100;
-    letter-spacing: -0.2px;
-    font-size: 22px;
-    border-radius: 15px !important;
-    margin-left: 0px;
-    height: 55px;
-    padding-left: 23px;
-    padding-right: 23px;
-    padding-top: 9px;
-        }
-        .bando-banner button:hover {
-            background: #0056b3;
+
+        @keyframes waveMove {
+            from {
+                left: -100%;
+            }
+            to {
+                left: 100%;
+            }
         }
       
+  
     </style>
 </head>
 <body>
-  
-   <div class="bando-container">
-        <div class="bando-load-bar"></div>
-        <div class="bando-banner">
-            <div class="bando-banner-content">
-                <h2 id="bando-title">EdixSport</h2>
-                <p id="bando-desc">Solutions pour </p>
-            </div>
-            <a id="bando-link" href="https://bleu.com/" target="_blank">
-                <button>En savoir plus</button>
-            </a>
-        </div>
+   <div class="load-bar">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
     </div>
+
 
     <script>
         const slides = [
