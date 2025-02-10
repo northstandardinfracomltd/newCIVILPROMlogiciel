@@ -113,22 +113,58 @@
             color: white;
         }
       
+      
+              .cageX {
+     background: color(display-p3 0 0.50588 0.94902) !important;
+      }
+      
+              .cageX:hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+    cursor: pointer !important;
+}
+      
+      
              .cage1 {
      background: -webkit-linear-gradient(70deg, #703cac, #b37cf1);
       }
       
+      .cage1:hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+    cursor: pointer !important;
+}
+      
                  .cage2 {
      background: -webkit-linear-gradient(70deg, #119a7a, #19d4a7);
       }
+        .cage2:hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+    cursor: pointer !important;
+}
+      
       
                  .cage3 {
      background: -webkit-linear-gradient(222deg, #ff8d90, #EE0007);
       }
       
+        .cage3:hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+    cursor: pointer !important;
+}
+      
+      
                  .cage4 {
      background: -webkit-linear-gradient(20deg, #D64C81, #FF86B4);
       }
-
+  .cage4:hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+    cursor: pointer !important;
+}
+      
       
         .step1-buttons button img {
             width: 20px;
@@ -2098,7 +2134,11 @@ background-color: color(display-p3 0 0 0) !important;
             }
         }
       
-  
+  .gros img {
+   display: none !important;
+}
+      
+      
     </style>
 </head>
 <body>
@@ -2262,14 +2302,24 @@ toggleBtn2999wMAGsap.textContent = "Lire la suite";
       
 
       
-                <button class="cage1" onclick="selectChoice('Un logiciel.', 'Lorem ipsum dolor sit amet.', this)">
-        <div>
+               
+      
+      
+      
+      
+      <button class="cage1 gros" onclick="selectChoice('Un logiciel.', 'Lorem ipsum dolor sit amet.', this)">
+              <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
+  <div>
             <strong>Logiciel</strong><br>
             <small>Infogérance pour vos données et processus métiers.</small>
         </div>
     </button>
       
-                <button class="cage2" onclick="selectChoice('Choix1', 'Lorem ipsum dolor sit amet.', this)">
+      
+      
+
+      
+                <button class="cage2 gros" onclick="selectChoice('Choix1', 'Lorem ipsum dolor sit amet.', this)">
         <div>
             <strong>Système</strong><br>
             <small>Fonctions spécifiques avec une interface embarquée.</small>
@@ -2277,19 +2327,19 @@ toggleBtn2999wMAGsap.textContent = "Lire la suite";
     </button>
       
       
-    <button class="cage3" onclick="selectChoice('Choix2', 'Consectetur adipiscing elit.', this)">
+    <button class="cage3 gros" onclick="selectChoice('Choix2', 'Consectetur adipiscing elit.', this)">
         <div>
             <strong>Plateforme</strong><br>
             <small>Connecter des utilisateurs autour d'une solution unique.</small>
         </div>
     </button>
-    <button class="cage4" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
+    <button class="cage4 gros" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
         <div>
             <strong>UI</strong><br>
             <small>Services pour l'accessibilité et l'expérience utilisateur.</small>
         </div>
     </button>
-          <button class="cage4" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
+          <button class="cageX" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
         <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
         <div>
             <strong>Produit SportX</strong><br>
@@ -2297,7 +2347,7 @@ toggleBtn2999wMAGsap.textContent = "Lire la suite";
         </div>
     </button>
       
-                <button class="cage4" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
+                <button class="cageX" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
         <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
         <div>
             <strong>Produit MedicalX</strong><br>
@@ -2598,7 +2648,16 @@ setTimeout(() => {
 
         
 }
-function showTypingEffect(text, callback) {
+
+      
+      
+      
+      
+      
+      
+      
+      
+      function showTypingEffect(text, callback) {
     let chatDisplay = document.getElementById('chatDisplay');
 
     // Crée une bulle vide pour l'effet typing
@@ -2633,6 +2692,9 @@ function showTypingEffect(text, callback) {
     setTimeout(typeLetter, 500); // Démarrage du typing après un court délai
 }
 
+      
+      
+      
 function handleEnter(event) {
     if (event.key === "Enter") { 
         event.preventDefault(); // Empêche le saut de ligne dans l'input
