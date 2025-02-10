@@ -2537,16 +2537,19 @@ setTimeout(() => {
 }
 
       
-window.onload = function() {
-    showTypingEffect('Que souhaitez-vous créer.', () => {
+window.onload = function () {
+    showTypingEffect('Pour débuter, indiquez moi un produit ou une solution qui vous intéresse.', () => {
         setTimeout(() => {
             let step1Buttons = document.querySelectorAll('#step1 button');
-            step1Buttons.forEach(button => {
-                button.style.display = 'inline-block'; // Affiche chaque bouton
+            step1Buttons.forEach((button, index) => {
+                setTimeout(() => {
+                    button.style.display = 'inline-block'; // Affiche chaque bouton un par un
+                }, index * 200); // Délai de 0,5s entre chaque bouton
             });
-        }, 001); // Délai de 2 secondes après la fin du typing
+        }, 100); // Délai de 2 secondes après la fin du typing
     });
 };
+
 
 
 function submitFinalForm() {
@@ -2615,8 +2618,11 @@ function showTypingEffect(text, callback) {
     function typeLetter() {
         if (i < text.length) {
             typingText.innerHTML += text[i]; // Ajoute une lettre
+
+            let delay = (text[i] === ',') ? 500 : 50; // Pause de 500ms après une virgule, sinon 50ms
+
             i++;
-            setTimeout(typeLetter, 50); // Vitesse du typing
+            setTimeout(typeLetter, delay);
         } else {
             cursor.remove(); // Supprime le curseur à la fin
             scrollToBottom(); // Scroll automatique **après** le typing
