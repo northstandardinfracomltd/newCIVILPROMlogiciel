@@ -2537,15 +2537,18 @@ function selectStep4Choice(choice, subtitle) {
                 <small>${subtitle}</small>
             </div>
         </div>`;
+
     document.getElementById('step4').style.display = 'none';
 
-    // Ajout du message "Choix de Options A B ou C" après 1 sec
-setTimeout(() => {
-    showTypingEffect('Choix de Options A B ou C', () => {
-        document.getElementById('step5').style.display = 'flex';
-    });
-}, 1500);
+    // Ajustement de la min-height de .chat-display à 500px
+    document.querySelector('.chat-display').style.minHeight = '600px';
 
+    // Ajout du message "Choix de Options A B ou C" après 1.5 sec
+    setTimeout(() => {
+        showTypingEffect('Choix de Options A B ou C', () => {
+            document.getElementById('step5').style.display = 'flex';
+        });
+    }, 1500);
 }
 
 
@@ -2569,9 +2572,12 @@ setTimeout(() => {
       
       
       
-      function selectStep5Choice(choice, subtitle) {
+function selectStep5Choice(choice, subtitle) {
     document.querySelectorAll('.chat-bubble').forEach(bubble => bubble.style.display = 'none');
     document.getElementById('stickyFooter').style.display = 'none';
+
+    // Modifier la min-height de .chat-display
+    document.querySelector('.chat-display').style.minHeight = '90px';
 
     // Afficher le loader pendant 3 secondes
     document.getElementById('loaderContainer').style.display = 'flex';
