@@ -49,7 +49,7 @@
         }
       
               .container {
-            width: 90%;
+            width: 100%;
             height: 100%;
             min-height: 325px;
             background: #000;
@@ -86,7 +86,7 @@
     margin-bottom: 10px;
     max-width: 80%;
     display: flex;
-    color: #000;
+    color: #fff;
     align-items: center;
     gap: 10px;
     margin-top: 45px;
@@ -96,7 +96,7 @@
             height: 20px;
         }
         .sticky-footer {
-    background: white;
+    background: #000;
     padding: 10px;
     border-top: none;
     display: flex
@@ -2140,8 +2140,7 @@ background-color: color(display-p3 0 0 0) !important;
       .vivendi {
 width: 100%;
 background-color: #000;
-display: grid;
-gap: 60px;
+display: block;
 padding: 0px;
 margin-top: -25px;
         min-height: 490px;
@@ -2266,8 +2265,6 @@ margin-top: -25px;
          
          
 <div class="vivendi">
-<div class="vivendicol">X</div>  
-<div class="vivendicol">
       <div class="grid-itemEDIX">
           <div class="container">
         <div class="chat-display" id="chatDisplay"></div>
@@ -2402,9 +2399,26 @@ margin-top: -25px;
     </div>
     
     </div>
-  
-  </div>     
+     
 </div>
+         
+      
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
          
          
 
@@ -2581,7 +2595,7 @@ function selectStep5Choice(choice, subtitle) {
 
       
 window.onload = function () {
-    showTypingEffect('Bienvenue chez EdixMatic! Indiquez moi un produit ou une solution qui vous intéresse parmis les choix ci-dessous.', () => {
+    showTypingEffect('Bienvenue chez EdixMatic, indiquez-moi une solution pour répondre à votre idée, accompagner votre entreprise, ou encore améliorer vos parcours, expériences et processus.', () => {
         setTimeout(() => {
             let step1Buttons = document.querySelectorAll('#step1 button');
             step1Buttons.forEach((button, index) => {
