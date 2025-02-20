@@ -2314,21 +2314,22 @@ margin-top: -25px;
 </div>
 </button>
           
-<button class="cageX gros" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
-<img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
-<div>
-<strong class="proximus">Produit SportX</strong><br>
-<small class="terra">Services pour l'accessibilité et l'expérience utilisateur.</small>
-</div>
+<button class="cageX gros" onclick="handleSpecialChoice(this)">
+    <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
+    <div>
+        <strong class="proximus">Produit SportX</strong><br>
+        <small class="terra">Services pour l'accessibilité et l'expérience utilisateur.</small>
+    </div>
 </button>
-      
-<button class="cageX gros" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
-<img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
-<div>
-<strong class="proximus">Produit MedicalX</strong><br>
-<small class="terra">Services pour l'accessibilité et l'expérience utilisateur.</small>
-</div>
+
+<button class="cageX gros" onclick="handleSpecialChoice(this)">
+    <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
+    <div>
+        <strong class="proximus">Produit MedicalX</strong><br>
+        <small class="terra">Services pour l'accessibilité et l'expérience utilisateur.</small>
+    </div>
 </button>
+
       
 </div>
 
@@ -2721,6 +2722,15 @@ function scrollToBottom() {
       function scrollToBottom() {
     let chatDisplay = document.getElementById('chatDisplay');
     chatDisplay.scrollTop = chatDisplay.scrollHeight;
+}
+function handleSpecialChoice(button) {
+    let productName = button.querySelector('.proximus').innerText; // Récupère le texte du bouton
+
+    if (productName === "Produit SportX") {
+        window.location.href = "https://sport.edixmatic.com/"; // Ouvre le lien dans le même onglet
+    } else if (productName === "Produit MedicalX") {
+        window.location.href = "https://medical.edixmatic.com/"; // Ouvre le lien dans le même onglet
+    }
 }
 
 
