@@ -153,9 +153,10 @@ font-size: 22px !important;
       
 /* Effet hover : bordure devient jaune */
 .cageX:hover {
+      transition-duration: 0.3s !important;
     color: #e8ff7a !important; /* Texte devient jaune */
     box-shadow: 0 0 0px 7px #e8ff7a1f; /* Effet de glow */
-    border: 4px solid #e8ff7a; /* Bordure jaune */
+    border: 1px solid #e8ff7a; /* Bordure jaune */
 }
 
 /* Désactivation du gradient au hover */
@@ -222,13 +223,7 @@ font-size: 22px !important;
     z-index: -1;
 }
 
-/* Effet au survol */
-.cageX:hover {
-    transform: scale(1.05);
-    cursor: pointer !important;
-}
 
-      
   
         .step1-buttons button img {
             width: 20px;
@@ -2410,7 +2405,7 @@ margin-right: 20px !important;
 <button class="cageX gros" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
-<strong class="proximus">UI</strong><br>
+<strong class="proximus">UI et UX</strong><br>
 <small class="terra">Services pour l'accessibilité et l'expérience utilisateur.</small>
 </div>
 </button>
@@ -2418,7 +2413,7 @@ margin-right: 20px !important;
 <button class="cageX gros" onclick="handleSpecialChoice(this)">
     <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
     <div>
-        <strong class="proximus">Produit SportX</strong><br>
+        <strong class="proximus">Sports Systems</strong><br>
         <small class="terra">Services pour l'accessibilité et l'expérience utilisateur.</small>
     </div>
 </button>
@@ -2697,7 +2692,7 @@ function selectStep5Choice(choice, subtitle) {
 
       
 window.onload = function () {
-    showTypingEffect('Bienvenue chez EdixMatic, indiquez-moi une solution pour répondre à votre idée, accompagner votre entreprise, ou encore améliorer vos parcours, expériences et processus.', () => {
+    showTypingEffect('Bienvenue, je suis votre assistant, pour quelle solution souhaitez-vous nous contacter.', () => {
         setTimeout(() => {
             let step1Buttons = document.querySelectorAll('#step1 button');
             step1Buttons.forEach((button, index) => {
