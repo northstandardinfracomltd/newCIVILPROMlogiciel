@@ -49,6 +49,7 @@
         }
       
               .container {
+            padding-top: 30px !important;
                     max-width: 950px;
     margin-left: auto;
     margin-right: auto;
@@ -64,11 +65,9 @@
                     padding: 7px;
         }
  .chat-display {
-   min-height: 100px;
-    flex: 1;
     padding: 10px;
     overflow-y: auto; /* Permet de faire défiler les bulles uniquement dans cette div */
-    max-height: 260px; /* Définir une hauteur maximale pour contenir les bulles */
+    max-height: 300px; /* Définir une hauteur maximale pour contenir les bulles */
     display: flex;
     flex-direction: column;
        border-radius: 18px 18px 0px 0px;
@@ -111,9 +110,8 @@
     border-radius: 0px 0px 18px 18px;
 }
         .step1-buttons {
-display: grid
-;
-    gap: 15px;
+display: grid;  margin-bottom: 40px;  margin-top: 30px;
+    gap: 22px;
     justify-content: center;
     /* grid-template-columns: 1fr 1fr; */
     grid-template-columns: repeat(3, 1fr);
@@ -2404,7 +2402,7 @@ margin-right: 20px !important;
       
       
       
-<button class="cageX gros" onclick="selectChoice('Choix1', 'Lorem ipsum dolor sit amet.', this)">
+<button class="cageX gros" onclick="selectChoice('— Système.', 'Lorem ipsum dolor sit amet.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
 <strong class="proximus">Système</strong><br>
@@ -2564,8 +2562,6 @@ function selectChoice(choice, subtitle, button) {
             </div>
         </div>`;
 
-    // Ajuste la min-height de .chat-display à 500px
-    document.querySelector('.chat-display').style.minHeight = '500px';
 
     // Masque Step 1 immédiatement
     document.getElementById('step1').style.display = 'none';
