@@ -2234,6 +2234,24 @@ margin-right: 20px !important;
                transition-duration: 0.3s;
 }
       
+      
+      @keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.fade-out-up {
+    animation: fadeOutUp 0.6s ease-out forwards; /* L'animation dure 0.6s et applique le style final */
+}
+
+      
+      
     </style>
 </head>
 <body>
@@ -2421,7 +2439,7 @@ margin-right: 20px !important;
 <button class="cageX gros" onclick="handleSpecialChoice(this)">
     <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
     <div>
-        <strong class="proximus">Produit MedicalX</strong><br>
+        <strong class="proximus">Medical Systems</strong><br>
         <small class="terra">Services pour l'accessibilité et l'expérience utilisateur.</small>
     </div>
 </button>
@@ -2551,12 +2569,21 @@ function selectChoice(choice, subtitle, button) {
 
     // Masque Step 1 immédiatement
     document.getElementById('step1').style.display = 'none';
+setTimeout(() => {
+    let introBubble = document.getElementById('introBubble'); 
+    if (introBubble) {
+        introBubble.classList.add('fade-out-up'); // Ajoute l'animation de disparition
+        setTimeout(() => {
+            introBubble.remove(); // Supprime la bulle après l’animation
+        }, 600); // Attend la fin de l'animation (0.6s)
+    }
 
-    setTimeout(() => {
-        showTypingEffect('Parfait! Indiquez moi un titre pour votre projet.', () => {
-            document.getElementById('step2').style.display = 'flex';
-        });
-    }, 1000);
+    showTypingEffect('Parfait! Indiquez-moi un titre pour votre projet.', () => {
+        document.getElementById('step2').style.display = 'flex';
+    });
+}, 1000);
+
+
 }
 
   
@@ -2641,9 +2668,6 @@ function selectStep4Choice(choice, subtitle) {
 
     document.getElementById('step4').style.display = 'none';
 
-    // Ajustement de la min-height de .chat-display à 500px
-    document.querySelector('.chat-display').style.minHeight = '600px';
-
     // Ajout du message "Choix de Options A B ou C" après 1.5 sec
     setTimeout(() => {
         showTypingEffect('Choix de Options A B ou C', () => {
@@ -2677,8 +2701,6 @@ function selectStep5Choice(choice, subtitle) {
     document.querySelectorAll('.chat-bubble').forEach(bubble => bubble.style.display = 'none');
     document.getElementById('stickyFooter').style.display = 'none';
 
-    // Modifier la min-height de .chat-display
-    document.querySelector('.chat-display').style.minHeight = '90px';
 
     // Afficher le loader pendant 3 secondes
     document.getElementById('loaderContainer').style.display = 'flex';
@@ -2692,7 +2714,9 @@ function selectStep5Choice(choice, subtitle) {
 
       
 window.onload = function () {
-    showTypingEffect('Bienvenue, je suis votre assistant, pour quelle solution souhaitez-vous nous contacter.', () => {
+showTypingEffect('Bienvenue, je suis votre assistant, pour quelle solution souhaitez-vous nous contacter.', () => {
+    let introBubble = document.querySelector('.chat-bubble.right:last-child');
+    introBubble.id = "introBubble"; // Ajoute un identifiant pour la retrouver facilement
         setTimeout(() => {
             let step1Buttons = document.querySelectorAll('#step1 button');
             step1Buttons.forEach((button, index) => {
