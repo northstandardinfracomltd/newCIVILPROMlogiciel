@@ -56,7 +56,7 @@
             width: 100%;
             height: 100%;
             min-height: 325px;
-            background: #000;
+            background: transparent;
             border-radius: 23px;
             display: flex;
             flex-direction: column;
@@ -71,7 +71,7 @@
     display: flex;
     flex-direction: column;
        border-radius: 18px 18px 0px 0px;
-       background-color: #000;
+       background-color: transparent;
 }
 
         .chat-bubble {
@@ -98,7 +98,7 @@
             height: 20px;
         }
         .sticky-footer {
-    background: #000;
+    background: transparent;
     padding: 10px;
     border-top: none;
     display: flex
@@ -203,10 +203,11 @@ font-size: 22px !important;
     left: -1px;
     right: -1px;
     bottom: -1px;
-    background: linear-gradient(45deg, #1f1f1ffa, #2727279c, #202020);
+    background: linear-gradient(var(--gradient-angle, 0deg), #2c2c2cfa, #2727279c, #151515);
     border-radius: 16px;
     z-index: -2;
 }
+
 
 /* Ajout d'un masque noir pour ne pas recouvrir l'intérieur du bouton */
 .cageX::after {
@@ -338,7 +339,7 @@ font-size: 22px !important;
       .chat-bubble.right  {
             line-height: 28px;
     margin-right: auto;
-    background-color: #000;
+    background-color: transparent;
     color: #fff !important;
     padding: 0px !important;
     border: 0px solid #ffffffba !important;
@@ -2198,12 +2199,14 @@ background-color: color(display-p3 0 0 0) !important;
 
       
       .vivendi {
-width: 100%;
-background-color: #000;
-display: block;
-padding: 0px;
-margin-top: -25px;
-        min-height: 490px;
+    width: 100%;
+    display: block;
+    padding: 0px;
+    margin-top: -25px;
+    min-height: 490px;
+    background-color: #52525247;
+    background-image: radial-gradient(circle, #232323 1px, #000000 1px);
+    background-size: 25px 25px;
 }
       
       
@@ -2445,6 +2448,21 @@ margin-right: 20px !important;
       
 </div>
 
+          <script>
+          const animateGradient = () => {
+    let angle = 0;
+    const cageX = document.querySelector('.cageX');
+    
+    if (!cageX) return;
+    
+    const interval = setInterval(() => {
+        angle = (angle + 5) % 360; // Augmente l'angle rapidement
+        cageX.style.setProperty('--gradient-angle', `${angle}deg`);
+    }, 50); // Rafraîchit toutes les 50ms
+};
+
+document.addEventListener("DOMContentLoaded", animateGradient);
+          </script>
        <div class="step2-input" id="step2">
 <input type="text" id="userInput" placeholder="Entrez un titre..." 
        oninput="toggleSendButton()" onkeydown="handleEnter(event)">
@@ -2882,6 +2900,9 @@ toggleBtn2999wMAGsap.textContent = "Lire la suite";
 }
 });
 });
+  
+  
+  
 </script> 
         
       <div class="grid-container44">
