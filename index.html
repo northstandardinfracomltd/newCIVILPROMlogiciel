@@ -80,9 +80,9 @@
     letter-spacing: -0.2px !important;
     font-size: 18px !important;
     cursor: default !important;
-    align-self: flex-start !important;
+    align-self: center !important;
     word-wrap: break-word;
-    background: #000000;
+    background: transparent;
     padding: 12px 15px 11px 15px;
     border-radius: 15px;
     margin-bottom: 10px;
@@ -232,24 +232,59 @@ font-size: 22px !important;
             background: #0056b3;
         }
         .step2-input {
-            display: none;
-            flex-direction: row;
-            gap: 10px;
+display: none;
+    flex-direction: row;
+    gap: 10px;
+    width: 98%;
+    max-width: 300px;
+    align-items: center !important;
+    margin-left: auto;
+    margin-right: auto;
+              color: #e8ff7a !important;
         }
         .step2-input input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+    flex: 1;
+    text-align: center !important;
+    background-color: #00000000 !important;
+    color: #e8ff7a !important;
+    padding: 8px 20px 7px 20px !important;
+    border: 1px solid #e8ff7a !important;
+    cursor: pointer !important;
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 22px !important;
+    border-radius: 15px !important;
+    height: 37px !important;
         }
+      
+      .step2-input input:hover {
+    transition-duration: 0s !important;
+    color: #e8ff7a !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+    border: 1px solid #e8ff7a;
+}
+
         .step2-input button {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background: #28a745;
-            color: white;
+    text-align: center !important;
+    background-color: color(display-p3 0 0.50588 0.94902) !important;
+    color: #fff !important;
+    padding: 8px 20px 7px 20px !important;
+    cursor: pointer !important;
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 22px !important;
+    border-radius: 15px !important;
+    height: 54px !important;
+    border: 1px solid color(display-p3 0 0.50588 0.94902) !important;
         }
+      
+           .step2-input button:hover {
+    box-shadow: 0 0 0px 7px #008eff38;
+    cursor: pointer;
+    transition-duration: 0s;
+}
       
       .step3-buttons button {
     padding: 10px 15px;
