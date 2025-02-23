@@ -2154,13 +2154,14 @@ background-color: color(display-p3 0 0 0) !important;
         }
             /* Conteneur de la barre */
         .load-bar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2.5px;
-            overflow: hidden;
-            background: #4D9BFF; /* Première couleur de fond */
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+    background: #000000;
+    margin-bottom: -50px;
         }
 
         /* Barre animée avec effet de vagues successives */
@@ -2170,17 +2171,17 @@ background-color: color(display-p3 0 0 0) !important;
             left: 0;
             width: 100%;
             height: 100%;
-            background: #FFB84D; /* Première vague qui recouvre */
-            animation: waveMove 3s linear infinite;
+            background: #000; /* Première vague qui recouvre */
+            animation: waveMove 1s linear infinite;
         }
 
         .wave:nth-child(2) {
-            background: #4DFF4D; /* Seconde vague qui recouvre */
+            background: #e8ff7a; /* Seconde vague qui recouvre */
             animation-delay: 0.75s;
         }
 
         .wave:nth-child(3) {
-            background: #FF4D4D; /* Troisième vague qui recouvre */
+            background: #000; /* Troisième vague qui recouvre */
             animation-delay: 1.5s;
         }
 
@@ -2202,7 +2203,7 @@ background-color: color(display-p3 0 0 0) !important;
     width: 100%;
     display: block;
     padding: 0px;
-    margin-top: -25px;
+    margin-top: -120px;
     min-height: 490px;
     background-color: #52525247;
     background-image: radial-gradient(circle, #232323 1px, #000000 1px);
@@ -2261,6 +2262,18 @@ margin-right: 20px !important;
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
+  
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    animateGradient();
+    
+    setTimeout(() => {
+        const loadBar = document.querySelector('.load-bar');
+        if (loadBar) {
+            loadBar.style.display = 'none';
+        }
+    }, 6000); // Masque la div après 4 secondes
+});
+</script>
 
 
     <script>
@@ -2350,9 +2363,16 @@ margin-right: 20px !important;
       }
     </script>
   
-      <div class="ringen">
-    
-    <div class="wrestling">
+
+  
+       <div class="darkA">
+       <div class="dark">
+       
+         
+         
+<div class="vivendi">
+  
+      <div class="wrestling">
     <div class="navbar">
           
         <img src="https://cdn.glitch.global/7aefa714-d318-48a4-8880-f5aee91469a4/temporaire.svg?v=1739223190442" alt="Logo">
@@ -2368,15 +2388,7 @@ margin-right: 20px !important;
                       <button class="CTAlog2" >Être rappelé</button></a>
             <button class="CTAlog science" onclick="openPopup()">S'identifier</button>
         </div>
-    </div> </div> </div>
-  
-  
-       <div class="darkA">
-       <div class="dark">
-       
-         
-         
-<div class="vivendi">
+    </div> </div> 
       <div class="grid-itemEDIX">
           <div class="container">
         <div class="chat-display" id="chatDisplay"></div>
@@ -2449,19 +2461,22 @@ margin-right: 20px !important;
 </div>
 
           <script>
-          const animateGradient = () => {
+const animateGradient = () => {
     let angle = 0;
-    const cageX = document.querySelector('.cageX');
+    const cages = document.querySelectorAll('.cageX');
     
-    if (!cageX) return;
+    if (!cages.length) return;
     
     const interval = setInterval(() => {
         angle = (angle + 5) % 360; // Augmente l'angle rapidement
-        cageX.style.setProperty('--gradient-angle', `${angle}deg`);
+        cages.forEach(cage => {
+            cage.style.setProperty('--gradient-angle', `${angle}deg`);
+        });
     }, 50); // Rafraîchit toutes les 50ms
 };
 
 document.addEventListener("DOMContentLoaded", animateGradient);
+
           </script>
        <div class="step2-input" id="step2">
 <input type="text" id="userInput" placeholder="Entrez un titre..." 
