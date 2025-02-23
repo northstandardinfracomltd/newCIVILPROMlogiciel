@@ -55,7 +55,7 @@
     margin-right: auto;
             width: 100%;
             height: 100%;
-            min-height: 325px;
+            min-height: 170px;
             background: transparent;
             border-radius: 23px;
             display: flex;
@@ -2190,7 +2190,7 @@ position: absolute;
     display: block;
     padding: 0px;
     margin-top: -120px;
-    min-height: 490px;
+    min-height: 150px;
     background-color: #52525247;
     background-image: radial-gradient(circle, #232323 1px, #000000 1px);
     background-size: 25px 25px;
@@ -2274,7 +2274,9 @@ margin-right: 20px !important;
         <div class="wave"></div>
     </div>
   
-  <script>document.addEventListener("DOMContentLoaded", () => {
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", () => {
     animateGradient();
     
     setTimeout(() => {
@@ -2282,8 +2284,24 @@ margin-right: 20px !important;
         if (loadBar) {
             loadBar.style.display = 'none';
         }
-    }, 6000); // Masque la div après 4 secondes
+    }, 4000); // Masque la div après 4 secondes
+    
+    const vivendi = document.querySelector('.vivendi');
+    if (vivendi) {
+        let height = 100;
+        const step = (650 - 100) / (2000 / 16); // px per frame at 60fps
+        
+        const expandInterval = setInterval(() => {
+            height += step;
+            if (height >= 650) {
+                height = 650;
+                clearInterval(expandInterval);
+            }
+            vivendi.style.minHeight = `${height}px`;
+        }, 16); // Rafraîchit toutes les 16ms (60 FPS)
+    }
 });
+
 </script>
 
 
@@ -2380,7 +2398,7 @@ margin-right: 20px !important;
        <div class="dark">
        
          
-         
+
 <div class="vivendi">
   
       <div class="wrestling">
@@ -2389,7 +2407,7 @@ margin-right: 20px !important;
         <img src="https://cdn.glitch.global/7aefa714-d318-48a4-8880-f5aee91469a4/temporaire.svg?v=1739223190442" alt="Logo">
         <div class="right-button">
           
-<button class="heyyou science" onclick="openPopup()">Contacter un spécialiste</button>
+<button class="heyyou science" onclick="openPopup()">Contact</button>
             <button class="CTAlog science" onclick="openPopup()">S'identifier</button>
         </div>
     </div> </div> 
