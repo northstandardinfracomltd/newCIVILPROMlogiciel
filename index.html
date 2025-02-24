@@ -370,8 +370,11 @@ display: none;
 }
 
 .step3-buttons button.selected {
-    background: #0056b3;
+    transform: scale(1.06);
+    background: #000000;
+    color: #e8ff7a !important;
     color: white;
+    box-shadow: 0 0 0px 1px #e8ff7a;
 }
 
       
@@ -389,14 +392,32 @@ display: none;
 }
 
         .step3-send {
-            background: #ccc;
-            cursor: not-allowed;
+background-color: color(display-p3 0 0.50588 0.94902) !important;
+    color: #fff !important;
+    padding: 8px 20px 7px 20px !important;
+    cursor: pointer !important;
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 22px !important;
+    border-radius: 15px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    height: 54px !important;
+    z-index: 999999999 !important;
+    border: 1px solid color(display-p3 0 0.50588 0.94902) !important;
+    margin-top: 14px;
+    opacity: 0.2;
         }
         .step3-send.active {
-            background: #28a745;
-            cursor: pointer;
+    opacity: 1;
         }
       
+      .step3-send.active:hover {
+    box-shadow: 0 0 0px 7px #008eff38;
+    cursor: pointer;
+    transition-duration: 0s;
+}
       
       .step4-buttons {
     display: flex;
