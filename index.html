@@ -2731,25 +2731,39 @@ setTimeout(() => {
         }
 
       
-      
-      function sendStep3Choices() {
+function sendStep3Choices() {
     if (step3Choices.length > 0) {
         let selectedChoices = step3Choices.map(choice => `<span>${choice}</span>`).join(', ');
         document.getElementById('chatDisplay').innerHTML += `<div class='chat-bubble'><strong>Choix: </strong>${selectedChoices}</div>`;
+
+        // Sélectionne les bulles à supprimer
+        let step3Bubble = document.getElementById('step3Question'); 
+        let step2Bubble = document.getElementById('step2Response');
+
+        // Applique l'effet de disparition avant suppression
+        if (step3Bubble) {
+            step3Bubble.classList.add('fade-out-up'); // Ajoute l'animation
+            setTimeout(() => step3Bubble.remove(), 600); // Supprime après l'animation
+        }
+
+        if (step2Bubble) {
+            step2Bubble.classList.add('fade-out-up'); // Ajoute l'animation
+            setTimeout(() => step2Bubble.remove(), 600); // Supprime après l'animation
+        }
+
         document.getElementById('step3').style.display = 'none';
 
         // Ajout du message "Choix de Options" après 1 sec
-setTimeout(() => {
-    showTypingEffect('Choix de Options', () => {
-        document.getElementById('step4').style.display = 'flex';
-    });
-}, 1500);
-
-
+        setTimeout(() => {
+            showTypingEffect('Choix de Options', () => {
+                document.getElementById('step4').style.display = 'flex';
+            });
+        }, 1500);
 
         step3Choices = [];
     }
 }
+
 
 
       
@@ -2844,7 +2858,7 @@ function sendMessage() {
     let inputField = document.getElementById('userInput');
     let text = inputField.value.trim();
     if (text) {
-        document.getElementById('chatDisplay').innerHTML += `<div class='chat-bubble'>${text}</div>`;
+document.getElementById('chatDisplay').innerHTML += `<div class='chat-bubble' id='step2Response'>${text}</div>`;
         inputField.value = '';
 
         // Sélectionne les bulles à supprimer
@@ -2866,9 +2880,13 @@ function sendMessage() {
 
         // Ajout du message "Intéressant!..." après 1 sec
         setTimeout(() => {
-            showTypingEffect('Intéressant! Quelle(s) industrie(s) correspondent au projet.', () => {
-                document.getElementById('step3').style.display = 'flex';
-            });
+showTypingEffect('Intéressant! Quelle(s) industrie(s) correspondent au projet.', () => {
+    let step3Question = document.querySelector('.chat-bubble.right:last-child');
+    if (step3Question) step3Question.id = "step3Question"; // Ajoute un ID pour suppression après
+
+    document.getElementById('step3').style.display = 'flex';
+});
+
         }, 1500);
     }
 
