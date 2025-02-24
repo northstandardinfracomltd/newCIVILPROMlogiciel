@@ -2327,12 +2327,12 @@ margin-right: 20px !important;
     const vivendi = document.querySelector('.vivendi');
     if (vivendi) {
         let height = 100;
-        const step = (650 - 100) / (2000 / 16); // px per frame at 60fps
+        const step = (615 - 100) / (2000 / 16); // px per frame at 60fps
         
         const expandInterval = setInterval(() => {
             height += step;
-            if (height >= 650) {
-                height = 650;
+            if (height >= 615) {
+                height = 615;
                 clearInterval(expandInterval);
             }
             vivendi.style.minHeight = `${height}px`;
@@ -2734,7 +2734,8 @@ setTimeout(() => {
 function sendStep3Choices() {
     if (step3Choices.length > 0) {
         let selectedChoices = step3Choices.map(choice => `<span>${choice}</span>`).join(', ');
-        document.getElementById('chatDisplay').innerHTML += `<div class='chat-bubble'><strong>Choix: </strong>${selectedChoices}</div>`;
+        document.getElementById('chatDisplay').innerHTML += `<div class='chat-bubble' id='step3Response'><strong>Choix: </strong>${selectedChoices}</div>`;
+
 
         // Sélectionne les bulles à supprimer
         let step3Bubble = document.getElementById('step3Question'); 
@@ -2755,9 +2756,13 @@ function sendStep3Choices() {
 
         // Ajout du message "Choix de Options" après 1 sec
         setTimeout(() => {
-            showTypingEffect('Choix de Options', () => {
-                document.getElementById('step4').style.display = 'flex';
-            });
+showTypingEffect('Choix de Options', () => {
+    let step4Question = document.querySelector('.chat-bubble.right:last-child');
+    if (step4Question) step4Question.id = "step4Question"; // Ajoute un ID pour suppression après
+
+    document.getElementById('step4').style.display = 'flex';
+});
+
         }, 1500);
 
         step3Choices = [];
@@ -2766,15 +2771,36 @@ function sendStep3Choices() {
 
 
 
-      
 function selectStep4Choice(choice, subtitle) {
-    document.getElementById('chatDisplay').innerHTML += `
-        <div class='chat-bubble'>
-            <div>
-                <strong>${choice}</strong><br>
-                <small>${subtitle}</small>
-            </div>
-        </div>`;
+    // Sélectionne les bulles à supprimer
+    let step3Bubble = document.getElementById('step3Response'); 
+    let step4Bubble = document.getElementById('step4Question');
+
+    // Applique l'effet de disparition avant suppression
+    if (step3Bubble) {
+        step3Bubble.classList.add('fade-out-up'); // Ajoute l'animation
+        setTimeout(() => step3Bubble.remove(), 600); // Supprime après animation
+    }
+
+    if (step4Bubble) {
+        step4Bubble.classList.add('fade-out-up'); // Ajoute l'animation
+        setTimeout(() => step4Bubble.remove(), 600); // Supprime après animation
+    }
+
+    // Attends la fin de l'animation avant d'afficher la nouvelle bulle
+    setTimeout(() => {
+        document.getElementById('chatDisplay').innerHTML += `
+            <div class='chat-bubble'>
+                <div>
+                    <strong>${choice}</strong><br>
+                    <small>${subtitle}</small>
+                </div>
+            </div>`;
+    }, 600);
+
+    document.getElementById('step4').style.display = 'none';
+
+
 
     document.getElementById('step4').style.display = 'none';
 
@@ -2797,7 +2823,7 @@ function selectStep4Choice(choice, subtitle) {
     setTimeout(() => {
         document.getElementById('loaderContainer').style.display = 'none'; // Cache le loader
         document.getElementById('finalForm').style.display = 'flex'; // Affiche le formulaire
-    }, 3000);
+    }, 3000000);
 }
 
       
