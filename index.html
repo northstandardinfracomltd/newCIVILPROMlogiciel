@@ -2658,8 +2658,9 @@ document.getElementById('chatDisplay').innerHTML += `
 
   
   
-    // Masque Step 1 immédiatement
-    document.getElementById('step1').style.display = 'none';
+// Masque Step 1 immédiatement
+document.getElementById('step1').style.display = 'none';
+
 setTimeout(() => {
     let introBubble = document.getElementById('introBubble'); 
     if (introBubble) {
@@ -2669,12 +2670,13 @@ setTimeout(() => {
         }, 600); // Attend la fin de l'animation (0.6s)
     }
 
-showTypingEffect('Parfait! Indiquez-moi un titre pour votre projet.', () => {
-    let step2Question = document.querySelector('.chat-bubble.right:last-child');
-    step2Question.classList.add('step2-question'); // Ajoute une classe pour la supprimer plus tard
+    showTypingEffect('Parfait! Indiquez-moi un titre pour votre projet.', () => {
+        let step2Question = document.querySelector('.chat-bubble.right:last-child');
+        if (step2Question) step2Question.id = "step2Question"; // Ajoute un ID pour le supprimer après
 
-  document.getElementById('step2').style.display = 'flex';
+        document.getElementById('step2').style.display = 'flex';
     });
+
 }, 1000);
 
 
@@ -2838,23 +2840,39 @@ function restartForm() {
 }
 
       
-
-      function sendMessage() {
+function sendMessage() {
     let inputField = document.getElementById('userInput');
     let text = inputField.value.trim();
     if (text) {
         document.getElementById('chatDisplay').innerHTML += `<div class='chat-bubble'>${text}</div>`;
         inputField.value = '';
+
+        // Sélectionne les bulles à supprimer
+        let step1Bubble = document.getElementById('step1Response'); 
+        let step2Bubble = document.getElementById('step2Question');
+
+        // Applique l'effet de disparition avant suppression
+        if (step1Bubble) {
+            step1Bubble.classList.add('fade-out-up'); // Effet vaporisation
+            setTimeout(() => step1Bubble.remove(), 600); // Suppression après l'animation
+        }
+
+        if (step2Bubble) {
+            step2Bubble.classList.add('fade-out-up'); // Effet vaporisation
+            setTimeout(() => step2Bubble.remove(), 600); // Suppression après l'animation
+        }
+
         document.getElementById('step2').style.display = 'none';
 
-        // Ajout du message "Choix de Blabla" après 1 sec
-setTimeout(() => {
-    showTypingEffect('Intéressant! Quelle(s) industrie(s) correspondent au projet.', () => {
-        document.getElementById('step3').style.display = 'flex';
-    });
-}, 1500); // Décalage pour éviter un chevauchement avec "Entrez un titre"
-
+        // Ajout du message "Intéressant!..." après 1 sec
+        setTimeout(() => {
+            showTypingEffect('Intéressant! Quelle(s) industrie(s) correspondent au projet.', () => {
+                document.getElementById('step3').style.display = 'flex';
+            });
+        }, 1500);
     }
+
+
         
 function sendMessage() {
     let inputField = document.getElementById('userInput');
