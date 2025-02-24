@@ -203,7 +203,7 @@ font-size: 22px !important;
     left: -1px;
     right: -1px;
     bottom: -1px;
-    background: linear-gradient(var(--gradient-angle, 0deg), #2c2c2cfa, #2727279c, #151515);
+    background: linear-gradient(var(--gradient-angle, 0deg), #3e3e3efa, #2727279c, #151515);
     border-radius: 16px;
     z-index: -2;
 }
@@ -289,12 +289,82 @@ display: none;
     transition-duration: 0s;
 }
       
+      
+            .mfa1 {
+    background: linear-gradient(45deg, #0e9a7a, #17c89e) ;
+              font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
+      
+                  .mfa2 {
+    background: linear-gradient(45deg, #197ec7, #2da5f9) ;
+              font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
+      
+                  .mfa3 {
+    background: linear-gradient(45deg, #703bac, #b27cf1) ;
+              font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
+      
+                  .mfa4 {
+    background: linear-gradient(45deg, #a54b22, #fb8a3c);
+              font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
+      
+                  .mfa5 {
+    background: linear-gradient(45deg, #9ba220, #e6f12c) ;
+              font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
+      
+      .mfa1:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
+      
+            .mfa2:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
+      
+      
+            .mfa3:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
+      
+      
+            .mfa4:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
+      
+      
+            .mfa5:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
+      
+      
+      
       .step3-buttons button {
     padding: 10px 15px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    background: #007bff;
     color: white;
     transition: background 0.3s;
 }
@@ -315,7 +385,7 @@ display: none;
 
 .step3-buttons {
     display: flex;
-    gap: 10px;
+    gap: 14px;
 }
 
         .step3-send {
@@ -457,6 +527,7 @@ text-align: center !important;
     height: 37px !important;
     margin-left: 0px;
     margin-right: 0px;
+      margin-bottom: 6px;
 }
 
 #finalForm button {
@@ -475,7 +546,19 @@ text-align: center !important;
     width: 98%;
     border: 1px solid color(display-p3 0 0.50588 0.94902) !important;
 }
+      
+      #finalForm input:hover {
+    transition-duration: 0s !important;
+    color: #e8ff7a !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+    border: 1px solid #e8ff7a;
+}
 
+      #finalForm button:hover {
+    box-shadow: 0 0 0px 7px #008eff38;
+    cursor: pointer;
+    transition-duration: 0s;
+}
       .typing {
     display: inline-block;
     width: -5px;
@@ -2249,7 +2332,7 @@ position: absolute;
     margin-top: -120px;
     min-height: 150px;
     background-color: #52525247;
-    background-image: radial-gradient(circle, #232323 1px, #000000 1px);
+    background-image: radial-gradient(circle, #282828 1px, #000000 1px);
     background-size: 25px 25px;
 }
       
@@ -2566,11 +2649,11 @@ document.addEventListener("DOMContentLoaded", animateGradient);
           
             <div class="step3-input" id="step3" style="display: none;">
                 <div class="step3-buttons">
-                    <button onclick="selectMultiple(this, 'Bla1')">Bla1</button>
-                    <button onclick="selectMultiple(this, 'Bla2')">Bla2</button>
-                    <button onclick="selectMultiple(this, 'Bla3')">Bla3</button>
-                    <button onclick="selectMultiple(this, 'Bla4')">Bla4</button>
-                    <button onclick="selectMultiple(this, 'Bla5')">Bla5</button>
+                    <button class="mfa1" onclick="selectMultiple(this, 'Bla1')">Bla1</button>
+                    <button class="mfa2" onclick="selectMultiple(this, 'Bla2')">Bla2</button>
+                    <button class="mfa3" onclick="selectMultiple(this, 'Bla3')">Bla3</button>
+                    <button class="mfa4" onclick="selectMultiple(this, 'Bla4')">Bla4</button>
+                    <button class="mfa5" onclick="selectMultiple(this, 'Bla5')">Bla5</button>
                 </div>
                 <button id="step3Send" class="step3-send" onclick="sendStep3Choices()" disabled>Send</button>
             </div>
