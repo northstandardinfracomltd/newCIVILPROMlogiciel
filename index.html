@@ -2720,14 +2720,15 @@ document.addEventListener("DOMContentLoaded", animateGradient);
                     <button class="mfa2" onclick="selectMultiple(this, '— Mobilités.')">Mobilités</button>
                     <button class="mfa3" onclick="selectMultiple(this, '— Mainteneurs.')">Mainteneurs</button>
                     <button class="mfa4" onclick="selectMultiple(this, '— FM.')">FM</button>
-                    <button class="mfa5" onclick="selectMultiple(this, '— Loisirs et sports.')">Loisirs et sports</button>
-                                      <button class="mfa1" onclick="selectMultiple(this, '— Commerce.')">Commerce</button>
-                    <button class="mfa2" onclick="selectMultiple(this, '— Mobilités.')">Mobilités</button>
-                    <button class="mfa3" onclick="selectMultiple(this, '— Mainteneurs.')">Mainteneurs</button>
-                    <button class="mfa4" onclick="selectMultiple(this, '— FM.')">FM</button>
-                    <button class="mfa5" onclick="selectMultiple(this, '— Loisirs et sports.')">Loisirs et sports</button>
+                    <button class="mfa5" onclick="selectMultiple(this, '— Loisirs et Sports.')">Loisirs et Sports</button>
+                               
+                  <button class="mfa1" onclick="selectMultiple(this, '— Collectivités.')">Collectivités</button>
+                    <button class="mfa2" onclick="selectMultiple(this, '— Logistique.')">Logistique</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Énergies.')">Énergies</button>
+                    <button class="mfa4" onclick="selectMultiple(this, '— Formation et Éducation.')">Formation et Éducation</button>
+                    <button class="mfa5" onclick="selectMultiple(this, '— Autre.')">Autre</button>
                 </div>
-                <button id="step3Send" class="step3-send" onclick="sendStep3Choices()" disabled>Send</button>
+                <button id="step3Send" class="step3-send" onclick="sendStep3Choices()" disabled>Valider</button>
             </div>
           
           
@@ -2930,7 +2931,7 @@ function sendStep3Choices() {
 
         // Ajout du message "Choix de Options" après 1 sec
         setTimeout(() => {
-showTypingEffect('Choix de Options', () => {
+showTypingEffect('Technologie ou fonction principale.', () => {
     let step4Question = document.querySelector('.chat-bubble.right:last-child');
     if (step4Question) step4Question.id = "step4Question"; // Ajoute un ID pour suppression après
 
