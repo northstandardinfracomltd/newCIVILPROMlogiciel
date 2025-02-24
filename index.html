@@ -2635,7 +2635,7 @@ margin-right: 20px !important;
       
       
       
-<button class="cageX gros fist" onclick="selectChoice('Un logiciel.', 'Lorem ipsum dolor sit amet.', this)">
+<button class="cageX gros fist" onclick="selectChoice('— Logiciel.', 'Lorem ipsum dolor sit amet.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
 <strong class="proximus">Logiciel</strong><br>
@@ -2654,7 +2654,7 @@ margin-right: 20px !important;
 </div>
 </button>    
       
-<button class="cageX gros" onclick="selectChoice('Choix2', 'Consectetur adipiscing elit.', this)">
+<button class="cageX gros" onclick="selectChoice('— Plateforme.', 'Consectetur adipiscing elit.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
 <strong class="proximus">Plateforme</strong><br>
@@ -2662,11 +2662,11 @@ margin-right: 20px !important;
 </div>
 </button>
       
-<button class="cageX gros" onclick="selectChoice('Choix3', 'Sed do eiusmod tempor.', this)">
+<button class="cageX gros" onclick="selectChoice('— UI et UX.', 'Sed do eiusmod tempor.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
 <strong class="proximus">UI et UX</strong><br>
-<small class="terra">Services pour l'accessibilité et l'expérience utilisateur.</small>
+<small class="terra">Services créatifs pour l'accessibilité et l'expérience.</small>
 </div>
 </button>
           
@@ -2682,7 +2682,7 @@ margin-right: 20px !important;
     <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
     <div>
         <strong class="proximus">Medical Systems</strong><br>
-        <small class="terra">Services pour l'accessibilité et l'expérience utilisateur.</small>
+        <small class="terra">Branche spécialisée pour des processus critiques.</small>
     </div>
 </button>
 
@@ -2708,19 +2708,24 @@ document.addEventListener("DOMContentLoaded", animateGradient);
 
           </script>
        <div class="step2-input" id="step2">
-<input type="text" id="userInput" placeholder="Entrez un titre..." 
+<input type="text" id="userInput" placeholder="Écrivez ici" 
        oninput="toggleSendButton()" onkeydown="handleEnter(event)">
-    <button id="sendButton" onclick="sendMessage()" disabled>Send</button>
+    <button id="sendButton" onclick="sendMessage()" disabled>Valider</button>
 </div>
 
           
             <div class="step3-input" id="step3" style="display: none;">
                 <div class="step3-buttons">
-                    <button class="mfa1" onclick="selectMultiple(this, 'Bla1')">Bla1</button>
-                    <button class="mfa2" onclick="selectMultiple(this, 'Bla2')">Bla2</button>
-                    <button class="mfa3" onclick="selectMultiple(this, 'Bla3')">Bla3</button>
-                    <button class="mfa4" onclick="selectMultiple(this, 'Bla4')">Bla4</button>
-                    <button class="mfa5" onclick="selectMultiple(this, 'Bla5')">Bla5</button>
+                    <button class="mfa1" onclick="selectMultiple(this, '— Commerce.')">Commerce</button>
+                    <button class="mfa2" onclick="selectMultiple(this, '— Mobilités.')">Mobilités</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Mainteneurs.')">Mainteneurs</button>
+                    <button class="mfa4" onclick="selectMultiple(this, '— FM.')">FM</button>
+                    <button class="mfa5" onclick="selectMultiple(this, '— Loisirs et sports.')">Loisirs et sports</button>
+                                      <button class="mfa1" onclick="selectMultiple(this, '— Commerce.')">Commerce</button>
+                    <button class="mfa2" onclick="selectMultiple(this, '— Mobilités.')">Mobilités</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Mainteneurs.')">Mainteneurs</button>
+                    <button class="mfa4" onclick="selectMultiple(this, '— FM.')">FM</button>
+                    <button class="mfa5" onclick="selectMultiple(this, '— Loisirs et sports.')">Loisirs et sports</button>
                 </div>
                 <button id="step3Send" class="step3-send" onclick="sendStep3Choices()" disabled>Send</button>
             </div>
@@ -2839,7 +2844,7 @@ setTimeout(() => {
         }, 600); // Attend la fin de l'animation (0.6s)
     }
 
-    showTypingEffect('Parfait! Indiquez-moi un titre pour votre projet.', () => {
+    showTypingEffect('Entrez un titre pour votre projet (3 lettres minimum).', () => {
         let step2Question = document.querySelector('.chat-bubble.right:last-child');
         if (step2Question) step2Question.id = "step2Question"; // Ajoute un ID pour le supprimer après
 
@@ -3075,7 +3080,7 @@ document.getElementById('chatDisplay').innerHTML += `<div class='chat-bubble' id
 
         // Ajout du message "Intéressant!..." après 1 sec
         setTimeout(() => {
-showTypingEffect('Intéressant! Quelle(s) industrie(s) correspondent au projet.', () => {
+showTypingEffect('Quelle(s) industrie(s) correspondent au projet (1 à 3 choix).', () => {
     let step3Question = document.querySelector('.chat-bubble.right:last-child');
     if (step3Question) step3Question.id = "step3Question"; // Ajoute un ID pour suppression après
 
