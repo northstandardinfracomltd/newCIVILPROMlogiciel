@@ -2827,17 +2827,17 @@ document.addEventListener("DOMContentLoaded", animateGradient);
           
             <div class="step3-input" id="step3" style="display: none;">
                 <div class="step3-buttons">
-                    <button class="mfa1" onclick="selectMultiple(this, '— Commerce.')">Commerce</button>
-                    <button class="mfa2" onclick="selectMultiple(this, '— Mobilité.')">Mobilité</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Commerce.')">Commerce</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Mobilité.')">Mobilité</button>
                     <button class="mfa3" onclick="selectMultiple(this, '— Mainteneur.')">Mainteneur</button>
-                    <button class="mfa4" onclick="selectMultiple(this, '— FM.')">FM</button>
-                    <button class="mfa5" onclick="selectMultiple(this, '— Loisir ou Sport.')">Loisir ou Sport</button>
-                    <button class="mfa1" onclick="selectMultiple(this, '— Collectivité.')">Collectivité</button>
-                    <button class="mfa2" onclick="selectMultiple(this, '— Logistique.')">Logistique</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— FM.')">FM</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Loisir ou Sport.')">Loisir ou Sport</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Collectivité.')">Collectivité</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Logistique.')">Logistique</button>
                     <button class="mfa3" onclick="selectMultiple(this, '— Énergie.')">Énergie</button>
-                    <button class="mfa4" onclick="selectMultiple(this, '— Formation ou Éducation.')">Formation ou Éducation.</button>
-                    <button class="mfa5" onclick="selectMultiple(this, '— Fabricant.')">Fabricant</button>
-                    <button class="mfa1" onclick="selectMultiple(this, '— Autre.')">Autre</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Formation ou Éducation.')">Formation ou Éducation.</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Fabricant.')">Fabricant</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Autre.')">Autre</button>
                 </div>
                 <button id="step3Send" class="step3-send" onclick="sendStep3Choices()" disabled>Valider</button>
             </div>
@@ -2845,7 +2845,7 @@ document.addEventListener("DOMContentLoaded", animateGradient);
           
           
           <div class="step4-buttons" id="step4" style="display: none;">
-    <button class="tech1" onclick="selectStep4Choice('Option1', ' ', this)">
+    <button class="tech2" onclick="selectStep4Choice('Option1', ' ', this)">
         <div>
             <strong>PME</strong><br>
             <small class="Ruinart"> </small>
@@ -2857,7 +2857,7 @@ document.addEventListener("DOMContentLoaded", animateGradient);
             <small class="Ruinart"> </small>
         </div>
     </button>
-    <button class="tech3" onclick="selectStep4Choice('— Autre (franchise, groupe, etc.).', ' ', this)">
+    <button class="tech2" onclick="selectStep4Choice('— Autre (franchise, groupe, etc.).', ' ', this)">
         <div>
             <strong>Autre (franchise, groupe, etc.)</strong><br>
             <small class="Ruinart"> </small>
@@ -2869,8 +2869,8 @@ document.addEventListener("DOMContentLoaded", animateGradient);
           
           <div class="step5-buttons" id="step5" style="display: none;">
     <button class="compa1" onclick="selectStep5Choice('— Usage interne.', 'Description option A')">Usage interne</button>
-    <button class="compa2" onclick="selectStep5Choice('— Usage externe ou client.', 'Description option B')">Usage externe ou client</button>
-    <button class="compa3" onclick="selectStep5Choice('— Usage interne, externe et client.', 'Description option C')">Usage interne, externe et client</button>
+    <button class="compa1" onclick="selectStep5Choice('— Usage externe ou client.', 'Description option B')">Usage externe ou client</button>
+    <button class="compa1" onclick="selectStep5Choice('— Usage interne, externe et client.', 'Description option C')">Usage interne, externe et client</button>
 </div>
 
           
@@ -2882,10 +2882,30 @@ document.addEventListener("DOMContentLoaded", animateGradient);
 </div>
 
 <div id="finalForm" style="flex-direction: column; gap: 15px; align-items: center;">
-    <label id="formLabel" style="line-height: 28px; margin-right: auto; background-color: transparent; color: #fff !important; padding: 0px !important; cursor: default !important; font-family: saasduoPAR !important; font-weight: 100 !important; letter-spacing: -0.2px !important; font-size: 18px !important; height: 15px !important; margin-left: auto; margin-top: 10px; margin-bottom: 20px; text-align: center; display: block; width: 100%; align-self: center !important;">Parfait! Votre projet demande une attention particulière d'un spécialiste ; pourriez-vous ajouter vos coordonnées pour vous contacter.</label>
-    <input type="email" placeholder="Votre email">
-    <input type="tel" placeholder="Votre téléphone">
-    <button onclick="submitFinalForm()">Valider</button>
+   <form>
+     
+  <label id="formLabel" style="line-height: 28px; margin-right: auto; background-color: transparent; color: #fff !important; padding: 0px !important; cursor: default !important; font-family: saasduoPAR !important; font-weight: 100 !important; letter-spacing: -0.2px !important; font-size: 18px !important; height: 15px !important; margin-left: auto; margin-top: 10px; margin-bottom: 20px; text-align: center; display: block; width: 100%; align-self: center !important;">Parfait! Votre projet demande une attention particulière d'un spécialiste ; pourriez-vous ajouter vos coordonnées pour vous contacter.</label>
+    <input type="email" name="email1" placeholder="Votre email" required>
+    <input type="tel" name="tel1" placeholder="Votre téléphone" required>
+    <button type="submit" onclick="submitFinalForm()">Valider</button>
+     
+                <script type="text/javascript">
+              window.addEventListener("DOMContentLoaded", function () {
+                const yourForm = document.getElementById("FORM_ID");
+                yourForm.addEventListener("submit", function (e) {
+                  e.preventDefault();
+                  const data = new FormData(yourForm);
+                  const action = e.target.action;
+                  fetch(action, {
+                    method: "POST",
+                    body: data,
+                  }).then(() => {
+                    window.location.replace("/20398203723780283217390028370921321form1validuk");
+                  });
+                });
+              });
+            </script>
+      </form>
 </div>
 
       
