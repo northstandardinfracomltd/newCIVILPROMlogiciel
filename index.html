@@ -269,7 +269,6 @@ display: none;
       
       .step2-input input:hover {
     transition-duration: 0s !important;
-    color: #e8ff7a !important;
     box-shadow: 0 0 0px 7px #e8ff7a1f;
     border: 1px solid #e8ff7a;
 }
@@ -380,8 +379,7 @@ display: none;
 .step3-buttons button.selected {
     transform: scale(1.06);
     background: #000000;
-    color: #e8ff7a !important;
-    color: white;
+    color: #fff !important;
     box-shadow: 0 0 0px 1px #e8ff7a;
 }
 
@@ -431,7 +429,7 @@ background-color: color(display-p3 0 0.50588 0.94902) !important;
       
       .step4-buttons {
     display: flex;
-    gap: 10px;
+    gap: 14px;
     justify-content: center;
 }
 
@@ -439,18 +437,62 @@ background-color: color(display-p3 0 0.50588 0.94902) !important;
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 20px;
+padding: 10px 15px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    background: #007bff;
     color: white;
     transition: background 0.3s;
+    white-space: nowrap;
+  
 }
+      
+        .Ruinart {
+   display: none !important;
+}
+      
+      .tech1 {
 
-.step4-buttons button:hover {
-    background: #0056b3;
+          background: linear-gradient(45deg, #197ec7, #2da5f9);
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
 }
+      
+      .tech1:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
+      
+            .tech2 {
+
+          background: linear-gradient(45deg, #0e9a7a, #17c89e);
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
+  
+            .tech2:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
+      
+            .tech3 {
+
+          background: linear-gradient(45deg, #703bac, #b27cf1);
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
+        .tech3:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
+      
+
 
       .step5-buttons {
     display: flex;
@@ -468,9 +510,7 @@ background-color: color(display-p3 0 0.50588 0.94902) !important;
     transition: background 0.3s;
 }
 
-.step5-buttons button:hover {
-    background: #0056b3;
-}
+
 
       
  
@@ -2744,22 +2784,22 @@ document.addEventListener("DOMContentLoaded", animateGradient);
           
           
           <div class="step4-buttons" id="step4" style="display: none;">
-    <button onclick="selectStep4Choice('Option1', 'Description option 1', this)">
+    <button class="tech1" onclick="selectStep4Choice('Option1', 'Description option 1', this)">
         <div>
             <strong>Option1</strong><br>
-            <small>Description option 1</small>
+            <small class="Ruinart">Description option 1</small>
         </div>
     </button>
-    <button onclick="selectStep4Choice('Option2', 'Description option 2', this)">
+    <button class="tech2" onclick="selectStep4Choice('Option2', 'Description option 2', this)">
         <div>
             <strong>Option2</strong><br>
-            <small>Description option 2</small>
+            <small class="Ruinart">Description option 2</small>
         </div>
     </button>
-    <button onclick="selectStep4Choice('Option3', 'Description option 3', this)">
+    <button class="tech3" onclick="selectStep4Choice('Option3', 'Description option 3', this)">
         <div>
             <strong>Option3</strong><br>
-            <small>Description option 3</small>
+            <small class="Ruinart">Description option 3</small>
         </div>
     </button>
 </div>
