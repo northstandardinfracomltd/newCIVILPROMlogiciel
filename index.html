@@ -492,6 +492,18 @@ padding: 10px 15px;
     box-shadow: 0 0 0px 7px #e8ff7a1f;
 }
       
+                  .tech4 {
+
+          background: linear-gradient(45deg, #a54b22, #fb8a3c);
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
+        .tech4:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
 
 
       .step5-buttons {
@@ -2820,32 +2832,33 @@ document.addEventListener("DOMContentLoaded", animateGradient);
           
           
           
-          <div class="step4-buttons" id="PME" style="display: none;">
-    <button class="tech1" onclick="selectStep4Choice('Option1', 'Description option 1', this)">
+          <div class="step4-buttons" id="step4" style="display: none;">
+    <button class="tech1" onclick="selectStep4Choice('Option1', ' ', this)">
         <div>
             <strong>PME</strong><br>
-            <small class="Ruinart">Description option 1</small>
+            <small class="Ruinart"> </small>
         </div>
     </button>
-    <button class="tech2" onclick="selectStep4Choice('ETI', 'Description option 2', this)">
+    <button class="tech2" onclick="selectStep4Choice('— ETI.', ' ', this)">
         <div>
             <strong>ETI</strong><br>
-            <small class="Ruinart">Description option 2</small>
+            <small class="Ruinart"> </small>
         </div>
     </button>
-    <button class="tech3" onclick="selectStep4Choice('Franchise, groupe ou autre', 'Description option 3', this)">
+    <button class="tech3" onclick="selectStep4Choice('— Franchise, groupe, association ou autre.', ' ', this)">
         <div>
-            <strong>Franchise, groupe ou autre</strong><br>
-            <small class="Ruinart">Description option 3</small>
+            <strong>Franchise, groupe, association ou autre</strong><br>
+            <small class="Ruinart"> </small>
         </div>
     </button>
+
 </div>
 
           
           <div class="step5-buttons" id="step5" style="display: none;">
-    <button class="compa1" onclick="selectStep5Choice('OptionA', 'Description option A')">Usage interne</button>
-    <button class="compa2" onclick="selectStep5Choice('OptionB', 'Description option B')">Usage client</button>
-    <button class="compa3" onclick="selectStep5Choice('OptionC', 'Description option C')">Usage interne et client</button>
+    <button class="compa1" onclick="selectStep5Choice('— Usage interne.', 'Description option A')">Usage interne</button>
+    <button class="compa2" onclick="selectStep5Choice('— Usage externe ou client.', 'Description option B')">Usage externe ou client</button>
+    <button class="compa3" onclick="selectStep5Choice('— Usage interne, externe et client.', 'Description option C')">Usage interne, externe et client</button>
 </div>
 
           
@@ -3018,7 +3031,7 @@ function sendStep3Choices() {
 
         // Ajout du message "Choix de Options" après 1 sec
         setTimeout(() => {
-showTypingEffect('Technologie ou fonction principale.', () => {
+showTypingEffect('Comment devons-nous définir votre structure.', () => {
     let step4Question = document.querySelector('.chat-bubble.right:last-child');
     if (step4Question) step4Question.id = "step4Question"; // Ajoute un ID pour suppression après
 
@@ -3067,7 +3080,7 @@ function selectStep4Choice(choice, subtitle) {
 
     // Ajout du message "Choix de Options A B ou C" après 1.5 sec
     setTimeout(() => {
-        showTypingEffect('Choix de Options A B ou C', () => {
+        showTypingEffect('Comment souhaitez-vous articuler la solution.', () => {
             document.getElementById('step5').style.display = 'flex';
         });
     }, 1500);
