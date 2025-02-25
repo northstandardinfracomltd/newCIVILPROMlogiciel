@@ -496,24 +496,61 @@ padding: 10px 15px;
 
       .step5-buttons {
     display: flex;
-    gap: 10px;
+    gap: 14px;
     justify-content: center;
 }
 
 .step5-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 14px;
     padding: 10px 15px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    background: #007bff;
     color: white;
     transition: background 0.3s;
+    white-space: nowrap;
 }
 
 
 
+      .compa1 {
+    background: linear-gradient(45deg, #a54b22, #fb8a3c);
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
       
+      .compa1:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
+            .compa2 {
+    background: linear-gradient(45deg, #9ba220, #e6f12c);
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
+    .compa2:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
+      
+            .compa3 {
+    background: linear-gradient(45deg, #0e9a7a, #17c89e);
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+}
  
+    .compa3:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
 
       .chat-bubble.right  {
             line-height: 28px;
@@ -2783,22 +2820,22 @@ document.addEventListener("DOMContentLoaded", animateGradient);
           
           
           
-          <div class="step4-buttons" id="step4" style="display: none;">
+          <div class="step4-buttons" id="PME" style="display: none;">
     <button class="tech1" onclick="selectStep4Choice('Option1', 'Description option 1', this)">
         <div>
-            <strong>Option1</strong><br>
+            <strong>PME</strong><br>
             <small class="Ruinart">Description option 1</small>
         </div>
     </button>
-    <button class="tech2" onclick="selectStep4Choice('Option2', 'Description option 2', this)">
+    <button class="tech2" onclick="selectStep4Choice('ETI', 'Description option 2', this)">
         <div>
-            <strong>Option2</strong><br>
+            <strong>ETI</strong><br>
             <small class="Ruinart">Description option 2</small>
         </div>
     </button>
-    <button class="tech3" onclick="selectStep4Choice('Option3', 'Description option 3', this)">
+    <button class="tech3" onclick="selectStep4Choice('Franchise, groupe ou autre', 'Description option 3', this)">
         <div>
-            <strong>Option3</strong><br>
+            <strong>Franchise, groupe ou autre</strong><br>
             <small class="Ruinart">Description option 3</small>
         </div>
     </button>
@@ -2806,9 +2843,9 @@ document.addEventListener("DOMContentLoaded", animateGradient);
 
           
           <div class="step5-buttons" id="step5" style="display: none;">
-    <button onclick="selectStep5Choice('OptionA', 'Description option A')">OptionA</button>
-    <button onclick="selectStep5Choice('OptionB', 'Description option B')">OptionB</button>
-    <button onclick="selectStep5Choice('OptionC', 'Description option C')">OptionC</button>
+    <button class="compa1" onclick="selectStep5Choice('OptionA', 'Description option A')">Usage interne</button>
+    <button class="compa2" onclick="selectStep5Choice('OptionB', 'Description option B')">Usage client</button>
+    <button class="compa3" onclick="selectStep5Choice('OptionC', 'Description option C')">Usage interne et client</button>
 </div>
 
           
@@ -3017,8 +3054,7 @@ function selectStep4Choice(choice, subtitle) {
         document.getElementById('chatDisplay').innerHTML += `
             <div class='chat-bubble'>
                 <div>
-                    <strong>${choice}</strong><br>
-                    <small>${subtitle}</small>
+                    <strong>${choice}</strong>
                 </div>
             </div>`;
     }, 600);
