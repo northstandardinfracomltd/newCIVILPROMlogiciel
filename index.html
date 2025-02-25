@@ -2573,7 +2573,8 @@ margin-right: 20px !important;
     animation: blink 0.6s infinite;
 }
 
-      
+
+
       
     </style>
 </head>
@@ -2874,7 +2875,7 @@ document.addEventListener("DOMContentLoaded", animateGradient);
 </div>
 
 <div id="finalForm" style="flex-direction: column; gap: 15px; align-items: center;">
-    <label id="formLabel" style="color: white; font-size: 18px; font-weight: bold;">Vos coordonnées</label>
+    <label id="formLabel" style="line-height: 28px; margin-right: auto; background-color: transparent; color: #fff !important; padding: 0px !important; cursor: default !important; font-family: saasduoPAR !important; font-weight: 100 !important; letter-spacing: -0.2px !important; font-size: 18px !important; height: 15px !important; margin-left: auto; margin-top: 10px; margin-bottom: 20px; text-align: center; display: block; width: 100%; align-self: center !important;">Parfait! Votre projet demande une attention particulière d'un spécialiste ; pourriez-vous ajouter vos coordonnées pour vous contacter.</label>
     <input type="email" placeholder="Votre email">
     <input type="tel" placeholder="Votre téléphone">
     <button onclick="submitFinalForm()">Valider</button>
@@ -3149,7 +3150,7 @@ function submitFinalForm() {
 
     // Supprimer les champs input et bouton submit
     finalForm.innerHTML = `
-        <label style="font-size: 18px; font-weight: bold;">Merci d'avoir complété</label>
+        <label style="line-height: 28px; margin-right: auto; background-color: transparent; color: #fff !important; padding: 0px !important; cursor: default !important; font-family: saasduoPAR !important; font-weight: 100 !important; letter-spacing: -0.2px !important; font-size: 18px !important; height: 15px !important; margin-left: auto; margin-top: 10px; margin-bottom: 20px; text-align: center; display: block; width: 100%; align-self: center !important;">Vous avez terminé! Votre demande est en cours d'examen, nous allons vous </label>
         <button onclick="restartForm()">Recommencer</button>
     `;
 }
