@@ -246,7 +246,7 @@ display: none;
     flex: 1;
     text-align: center !important;
     background-color: #00000000 !important;
-    color: #e8ff7a !important;
+    color: white !important;
     padding: 8px 20px 7px 20px !important;
     border: 1px solid #e8ff7a !important;
     cursor: pointer !important;
@@ -260,6 +260,12 @@ display: none;
     margin-right: 9px;
 
         }
+
+.step2-input input::placeholder {
+    color: white !important; /* Couleur du placeholder */
+    opacity: 1; /* Assure que la couleur est bien visible sur certains navigateurs */
+}
+
       
       .step2-input input:hover {
     transition-duration: 0s !important;
@@ -367,6 +373,8 @@ display: none;
     cursor: pointer;
     color: white;
     transition: background 0.3s;
+            white-space: nowrap; /* Empêche le texte des boutons de se couper */
+
 }
 
 .step3-buttons button.selected {
@@ -387,10 +395,12 @@ display: none;
 }
 
 .step3-buttons {
+      justify-content: center; /* Centre les boutons horizontalement */
     display: flex;
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne */
     gap: 14px;
+    max-width: 600px; /* Ajuste cette valeur selon la largeur désirée */
 }
-
         .step3-send {
 background-color: color(display-p3 0 0.50588 0.94902) !important;
     color: #fff !important;
