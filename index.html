@@ -635,7 +635,7 @@ border: 1px solid #ffffff38;
   width: 98%;
 text-align: center !important;
     background-color: #00000000 !important;
-    color: #e8ff7a !important;
+    color: white !important;
     padding: 8px 20px 7px 20px !important;
     border: 1px solid #e8ff7a !important;
     cursor: pointer !important;
@@ -649,6 +649,10 @@ text-align: center !important;
     margin-right: 0px;
       margin-bottom: 6px;
 }
+      
+      #finalForm input::placeholder {
+color: white; 
+      }
 
 #finalForm button {
     text-align: center !important;
@@ -669,7 +673,7 @@ text-align: center !important;
       
       #finalForm input:hover {
     transition-duration: 0s !important;
-    color: #e8ff7a !important;
+    color: #white !important;
     box-shadow: 0 0 0px 7px #e8ff7a1f;
     border: 1px solid #e8ff7a;
 }
@@ -2816,16 +2820,16 @@ document.addEventListener("DOMContentLoaded", animateGradient);
             <div class="step3-input" id="step3" style="display: none;">
                 <div class="step3-buttons">
                     <button class="mfa1" onclick="selectMultiple(this, '— Commerce.')">Commerce</button>
-                    <button class="mfa2" onclick="selectMultiple(this, '— Mobilités.')">Mobilités</button>
-                    <button class="mfa3" onclick="selectMultiple(this, '— Mainteneurs.')">Mainteneurs</button>
+                    <button class="mfa2" onclick="selectMultiple(this, '— Mobilité.')">Mobilité</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Mainteneur.')">Mainteneur</button>
                     <button class="mfa4" onclick="selectMultiple(this, '— FM.')">FM</button>
-                    <button class="mfa5" onclick="selectMultiple(this, '— Loisirs et Sports.')">Loisirs et Sports</button>
-                               
-                  <button class="mfa1" onclick="selectMultiple(this, '— Collectivités.')">Collectivités</button>
+                    <button class="mfa5" onclick="selectMultiple(this, '— Loisir ou Sport.')">Loisir ou Sport</button>
+                    <button class="mfa1" onclick="selectMultiple(this, '— Collectivité.')">Collectivité</button>
                     <button class="mfa2" onclick="selectMultiple(this, '— Logistique.')">Logistique</button>
-                    <button class="mfa3" onclick="selectMultiple(this, '— Énergies.')">Énergies</button>
-                    <button class="mfa4" onclick="selectMultiple(this, '— Formation et Éducation.')">Formation et Éducation</button>
-                    <button class="mfa5" onclick="selectMultiple(this, '— Autre.')">Autre</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Énergie.')">Énergie</button>
+                    <button class="mfa4" onclick="selectMultiple(this, '— Formation ou Éducation.')">Formation ou Éducation.</button>
+                    <button class="mfa5" onclick="selectMultiple(this, '— Fabricant.')">Fabricant</button>
+                    <button class="mfa1" onclick="selectMultiple(this, '— Autre.')">Autre</button>
                 </div>
                 <button id="step3Send" class="step3-send" onclick="sendStep3Choices()" disabled>Valider</button>
             </div>
@@ -2845,9 +2849,9 @@ document.addEventListener("DOMContentLoaded", animateGradient);
             <small class="Ruinart"> </small>
         </div>
     </button>
-    <button class="tech3" onclick="selectStep4Choice('— Franchise, groupe, association ou autre.', ' ', this)">
+    <button class="tech3" onclick="selectStep4Choice('— Autre (franchise, groupe, etc.).', ' ', this)">
         <div>
-            <strong>Franchise, groupe, association ou autre</strong><br>
+            <strong>Autre (franchise, groupe, etc.)</strong><br>
             <small class="Ruinart"> </small>
         </div>
     </button>
@@ -2869,11 +2873,11 @@ document.addEventListener("DOMContentLoaded", animateGradient);
     <div class="loader"></div>
 </div>
 
-<div id="finalForm" style="display: none; flex-direction: column; gap: 15px; align-items: center;">
-    <label id="formLabel" style="display: none; font-size: 18px; font-weight: bold;">Vos coordonnées</label>
+<div id="finalForm" style="flex-direction: column; gap: 15px; align-items: center;">
+    <label id="formLabel" style="color: white; font-size: 18px; font-weight: bold;">Vos coordonnées</label>
     <input type="email" placeholder="Votre email">
     <input type="tel" placeholder="Votre téléphone">
-    <button onclick="submitFinalForm()">Soumettre</button>
+    <button onclick="submitFinalForm()">Valider</button>
 </div>
 
       
