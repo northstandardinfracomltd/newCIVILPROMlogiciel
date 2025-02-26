@@ -367,8 +367,8 @@ display: none;
       
       .step3-buttons button {
     padding: 10px 15px;
-    border: none;
-    border-radius: 20px;
+    border: 1px solid #703bac;
+  border-radius: 80px;
     cursor: pointer;
     color: white;
     transition: background 0.3s;
@@ -380,9 +380,15 @@ display: none;
     transform: scale(1.06);
     background: #000000;
     color: #fff !important;
-    box-shadow: 0 0 0px 1px #e8ff7a;
+    border: 1px solid #e8ff7a;
+  border-radius: 80px;
 }
 
+      
+      .step3-buttons button.selected:hover {
+    transition-duration: 0s !important;
+    box-shadow: 0 0 0px 7px #e8ff7a1f;
+}
       
       .step3-input {
     display: none;
@@ -631,7 +637,7 @@ border: 1px solid #ffffff38;
 }
 
 #finalForm input {
-  max-width: 300px;
+  max-width: 253px;
   width: 98%;
 text-align: center !important;
     background-color: #00000000 !important;
@@ -2573,6 +2579,10 @@ margin-right: 20px !important;
     animation: blink 0.6s infinite;
 }
 
+      .porto {
+    width: 98%;
+        max-wdith: 300px;
+}
 
 
       
@@ -2882,9 +2892,9 @@ document.addEventListener("DOMContentLoaded", animateGradient);
 </div>
 
 <div id="finalForm" style="flex-direction: column; gap: 15px; align-items: center;">
-   <form>
+   <form class="porto">
      
-  <label id="formLabel" style="line-height: 28px; margin-right: auto; background-color: transparent; color: #fff !important; padding: 0px !important; cursor: default !important; font-family: saasduoPAR !important; font-weight: 100 !important; letter-spacing: -0.2px !important; font-size: 18px !important; height: 15px !important; margin-left: auto; margin-top: 10px; margin-bottom: 20px; text-align: center; display: block; width: 100%; align-self: center !important;">Parfait! Votre projet demande une attention particulière d'un spécialiste ; pourriez-vous ajouter vos coordonnées pour vous contacter.</label>
+  <label id="formLabel" style="line-height: 28px; margin-right: auto; background-color: transparent; color: #fff !important; padding: 0px !important; cursor: default !important; font-family: saasduoPAR !important; font-weight: 100 !important; letter-spacing: -0.2px !important; font-size: 18px !important; margin-left: auto; margin-top: 10px; margin-bottom: 20px; text-align: center; display: block; width: 100%; align-self: center !important;">Parfait! Votre projet demande une attention particulière d'un spécialiste ; pourriez-vous ajouter vos coordonnées pour vous contacter.</label>
     <input type="email" name="email1" placeholder="Votre email" required>
     <input type="tel" name="tel1" placeholder="Votre téléphone" required>
     <button type="submit" onclick="submitFinalForm()">Valider</button>
