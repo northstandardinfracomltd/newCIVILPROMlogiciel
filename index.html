@@ -3360,33 +3360,35 @@ function handleSpecialChoice(button) {
   
   
       <h1 class="big-titleMAG">Moteur de vos synergies</h1>
-          
-            
-<h2 class="text-block999MAG">EdiXmatic est un éditeur de solutions personnalisées pour fournir des expériences
-<span id="moreText2999wMAGsap" class="hidden">
-intuitives, simples et agréables pour les utilisateurs, avec pour mission de rendre synchrone et logique le physique et le digital, pour répondre à des usages complexes et critiques, souvent avec des fonctions internes et externes. EdiXmatic a été fondé en 2014 en Europe et assure le bon fonctionnement aujourd’hui d’environ 80 millions d’euros de valeur marchande d’activité auprès de nos clients.
-</span>
-<a href="#" id="toggleBtn2999wMAGsap" class="fapy2">Lire la suite</a>
+<h2 class="text-block999MAG">
+    EdiXmatic est un éditeur de solutions personnalisées pour fournir des expériences<span id="dots2999wMAGsap"> (...)</span>
+    <span id="moreText2999wMAGsap" class="hidden">
+        intuitives, simples et agréables pour les utilisateurs, avec pour mission de rendre synchrone et logique le physique et le digital, pour répondre à des usages complexes et critiques, souvent avec des fonctions internes et externes. EdiXmatic a été fondé en 2014 en Europe et assure le bon fonctionnement aujourd’hui d’environ 80 millions d’euros de valeur marchande d’activité auprès de nos clients.
+    </span>
+    <a href="#" id="toggleBtn2999wMAGsap" class="fapy2">Lire la suite</a>
 </h2>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-const toggleBtn2999wMAGsap = document.getElementById("toggleBtn2999wMAGsap");
-const moreText2999wMAGsap = document.getElementById("moreText2999wMAGsap");
-toggleBtn2999wMAGsap.addEventListener("click", function(event) {
-event.preventDefault();
-if (moreText2999wMAGsap.classList.contains("hidden")) {
-moreText2999wMAGsap.classList.remove("hidden");
-toggleBtn2999wMAGsap.textContent = "Réduire";
-} else {
-moreText2999wMAGsap.classList.add("hidden");
-toggleBtn2999wMAGsap.textContent = "Lire la suite";
-}
+    const toggleBtn2999wMAGsap = document.getElementById("toggleBtn2999wMAGsap");
+    const moreText2999wMAGsap = document.getElementById("moreText2999wMAGsap");
+    const dots2999wMAGsap = document.getElementById("dots2999wMAGsap");
+
+    toggleBtn2999wMAGsap.addEventListener("click", function(event) {
+        event.preventDefault();
+        if (moreText2999wMAGsap.classList.contains("hidden")) {
+            moreText2999wMAGsap.classList.remove("hidden");
+            dots2999wMAGsap.style.display = "none";
+            toggleBtn2999wMAGsap.textContent = "Réduire";
+        } else {
+            moreText2999wMAGsap.classList.add("hidden");
+            dots2999wMAGsap.style.display = "inline";
+            toggleBtn2999wMAGsap.textContent = "Lire la suite";
+        }
+    });
 });
-});
-  
-  
-  
-</script> 
+</script>
+
         
       <div class="grid-container44">
         <div class="grid-item44 multicolor-border2">
