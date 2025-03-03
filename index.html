@@ -87,17 +87,13 @@
                      @media (max-width: 900px) {
         
 .step5-buttons {
-  
-    display: block ;
+ justify-content: center;
+    flex-wrap: wrap;
 }
                        .step2-input input {
     margin-left: 0px !important;
 }
-                       
-                       .compa1 {
-    margin-bottom: 15px !important;
-
-}
+  
                        
                        
                        .step4-buttons {
@@ -106,10 +102,7 @@
 }
                        
                        
-    .step4-buttons button {
-
-    margin-bottom: 15px !important;
-}                   
+               
  }           
                
       
@@ -2939,14 +2932,14 @@ document.addEventListener("DOMContentLoaded", animateGradient);
             <div class="step3-input" id="step3" style="display: none;">
                 <div class="step3-buttons">
                     <button class="mfa3" onclick="selectMultiple(this, '— Commerce.')">Commerce</button>
-                    <button class="mfa3" onclick="selectMultiple(this, '— Mobilité.')">Mobilité</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Mobilités.')">Mobilités</button>
                     <button class="mfa3" onclick="selectMultiple(this, '— Mainteneur.')">Mainteneur</button>
                     <button class="mfa3" onclick="selectMultiple(this, '— FM.')">FM</button>
-                    <button class="mfa3" onclick="selectMultiple(this, '— Loisir ou Sport.')">Loisir ou Sport</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Loisirs ou Sports.')">Loisirs ou Sports</button>
                     <button class="mfa3" onclick="selectMultiple(this, '— Collectivité.')">Collectivité</button>
                     <button class="mfa3" onclick="selectMultiple(this, '— Logistique.')">Logistique</button>
-                    <button class="mfa3" onclick="selectMultiple(this, '— Énergie.')">Énergie</button>
-                    <button class="mfa3" onclick="selectMultiple(this, '— Formation ou Éducation.')">Formation ou Éducation.</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Énergies.')">Énergies</button>
+                    <button class="mfa3" onclick="selectMultiple(this, '— Formation ou Éducation.')">Formation ou Éducation</button>
                     <button class="mfa3" onclick="selectMultiple(this, '— Fabricant.')">Fabricant</button>
                     <button class="mfa3" onclick="selectMultiple(this, '— Autre.')">Autre</button>
                 </div>
@@ -2956,7 +2949,7 @@ document.addEventListener("DOMContentLoaded", animateGradient);
           
           
           <div class="step4-buttons" id="step4" style="display: none;">
-    <button class="tech2" onclick="selectStep4Choice('Option1', ' ', this)">
+    <button class="tech2" onclick="selectStep4Choice('— PME.', ' ', this)">
         <div>
             <strong>PME</strong><br>
             <small class="Ruinart"> </small>
@@ -3323,7 +3316,7 @@ document.getElementById('chatDisplay').innerHTML += `<div class='chat-bubble' id
 
         // Ajout du message "Intéressant!..." après 1 sec
         setTimeout(() => {
-showTypingEffect('Quelle(s) industrie(s) correspondent au projet (1 à 3 choix).', () => {
+showTypingEffect('Quelle(s) industrie(s) correspond(ent) au projet (1 à 3 choix).', () => {
     let step3Question = document.querySelector('.chat-bubble.right:last-child');
     if (step3Question) step3Question.id = "step3Question"; // Ajoute un ID pour suppression après
 
@@ -3444,9 +3437,9 @@ function scrollToBottom() {
 function handleSpecialChoice(button) {
     let productName = button.querySelector('.proximus').innerText; // Récupère le texte du bouton
 
-    if (productName === "Produit SportX") {
+    if (productName === "Sports Systems") {
         window.location.href = "https://sport.edixmatic.com/"; // Ouvre le lien dans le même onglet
-    } else if (productName === "Produit MedicalX") {
+    } else if (productName === "Medical Systems") {
         window.location.href = "https://medical.edixmatic.com/"; // Ouvre le lien dans le même onglet
     }
 }
