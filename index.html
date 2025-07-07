@@ -46,6 +46,7 @@
         height: 100%;
         font-family: Arial, sans-serif;
       background: #fff;
+                        font-weight: 100 !important;
         }
       
               .container {
@@ -131,6 +132,7 @@
         .chat-bubble img {
             width: 20px;
             height: 20px;
+          display: none !important;
         }
         .sticky-footer {
     background: transparent;
@@ -154,14 +156,14 @@ display: grid;  margin-bottom: 40px;  margin-top: 30px;
     justify-content: center;
     /* grid-template-columns: 1fr 1fr; */
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
         }
       
       
                  @media (max-width: 900px) {
                            .step1-buttons {
                                  grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
                              padding: 10px;
                              margin-top: -5px;
                              
@@ -213,66 +215,34 @@ font-size: 22px !important;
     display: none;
 }
       
-.cageX {
-    background: #000 !important;
-    color: #fff !important;
-    border-radius: 15px !important;
-    font-family: "saasduoPAR" !important;
-    font-weight: 100;
-    letter-spacing: -0.2px;
-    padding: 8px;
-    border-radius: 12px;
-    border: 1px solid transparent; 
-    border-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff) 1;
-}
 
 
    .cageX {
     position: relative;
-    background: #000 !important;
-    color: #fff !important;
-    font-family: "saasduoPAR" !important;
+    background: #00415900 !important;
+    color: #004159 !important;
+    font-family: "saasduoPAR";
     font-weight: 100;
     letter-spacing: -0.2px;
-    padding: 12px 24px; /* Évite que le contenu touche la bordure */
-    display: inline-flex;
+    padding: 12px 24px;
+    display: inline-flex
+;
     align-items: center;
     justify-content: center;
-    border-radius: 15px; /* Bord arrondi */
+    border-radius: 15px;
     text-decoration: none;
     font-size: 16px;
     transition: transform 0.3s ease-in-out;
     z-index: 1;
-    border: 1px solid transparent; /* Définit une bordure transparente */
+    border: 1px solid #0041592b;
 }
 
-/* Création d'une bordure en dégradé */
-.cageX::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    background: linear-gradient(var(--gradient-angle, 0deg), #3e3e3efa, #2727279c, #151515);
-    border-radius: 16px;
-    z-index: -2;
-}
+   .grit {
+    font-size: 26px !important;
+    font-family: "grit"!important;
 
 
-/* Ajout d'un masque noir pour ne pas recouvrir l'intérieur du bouton */
-.cageX::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #090909; /* Même couleur que le bouton */
-    border-radius: 15px; /* Doit être égal au bouton */
-    z-index: -1;
-}
-
+    }
 
   
         .step1-buttons button img {
@@ -655,7 +625,7 @@ padding: 10px 15px;
             line-height: 28px;
     margin-right: auto;
     background-color: transparent;
-    color: #fff !important;
+    color: #004159 !important;
     padding: 0px !important;
     border: 0px solid #ffffffba !important;
     cursor: default !important;
@@ -809,23 +779,31 @@ color: white;
 
       @font-face {
         font-family: saasduoTIL;
-        font-weight: bold;
-        src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Secondary?v=1692806478312")
+        src: url("https://civilprom.s3.eu-north-1.amazonaws.com/FontCVLPRM.otf")
           format("opentype");
+        font-weight: 100 !important;
       }
 
       @font-face {
-        font-family: saasduoPAR;
-        font-weight: bold;
-        src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20more?v=1692822723823")
-          format("opentype");
+   font-family: saasduoPAR;
+    src: url(https://civilprom.s3.eu-north-1.amazonaws.com/Font2CVLPRM.otf); 
+        font-weight: 100 !important;
       }
+      
+            @font-face {
+   font-family: grit;
+    src: url(https://civilprom.s3.eu-north-1.amazonaws.com/Font4CVLPRM.otf); 
+        font-weight: 100 !important;
+      }
+
+      
+      
 
       @font-face {
         font-family: saasduoBTN;
-        font-weight: bold;
-        src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Button?v=1692822927520")
+        src: url("https://civilprom.s3.eu-north-1.amazonaws.com/Font2CVLPRM.otf")
           format("opentype");
+        font-weight: 100 !important;
       }
 
       .science {
@@ -1459,7 +1437,7 @@ text-align: center;
             padding: 20px 10px 20px 0px;
         }
         .navbar img {
-    height: 60px;
+    height: 46px;
     margin-top: -1px;
     margin-bottom: -8px;
         }
@@ -2581,9 +2559,9 @@ position: absolute;
     padding: 0px;
     margin-top: -120px;
     min-height: 150px;
-    background-color: #52525247;
-    background-image: radial-gradient(circle, #282828 1px, #000000 1px);
-    background-size: 25px 25px;
+    background: linear-gradient(180deg, #e2f7ff, #ffffff);
+        min-height: 480px !important;
+            padding-bottom: 55px !important;
 }
       
       
@@ -2631,11 +2609,13 @@ margin-right: 20px !important;
 
 
 .heyyou {
+  display: none !important;
     text-align: center !important;
-    background-color: #000 !important;
-    color: #e8ff7a !important;
+    margin-right: -17px;
+    background-color: #37404300 !important;
+    color: #004159 !important;
     padding: 8px 20px 7px 20px !important;
-    border: 1px solid #e8ff7a !important;
+    border: 1px solid #ffffff00 !important;
     cursor: pointer !important;
     font-family: "saasduoPAR" !important;
     font-weight: 100 !important;
@@ -2808,13 +2788,49 @@ margin-right: 20px !important;
     </script>
   
 
+    <div class="cvlprm-banner">
+    <span class="cvlprm-text">Plus d'informations sur Kinesis, notre branche média & art<a href="https://g2.ai/try" class="cvlprm-link">Plus d'informations</a>
+    </span>
+  </div>
+  
+   <style>
+    .cvlprm-banner {
+    background-color: #004159;
+    color: #ffffff;
+      cursor: default !important;
+    font-family: "saasduoPAR" !important;
+    font-weight: 100 !important;
+    letter-spacing: -0.2px !important;
+    font-size: 18px !important;
+      text-align: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .cvlprm-text {
+      font-size: 1.25rem;
+    }
+
+    .cvlprm-link {
+      color: #00f0ff;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 5px;
+      transition: color 0.3s ease;
+    }
+
+    .cvlprm-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  </style>
   
        <div class="darkA">
        <div class="dark">
        
          
 
-<div class="vivendi">
+<div class="vivendi" style="min-height: 480px;">
   
       <div class="wrestling">
     <div class="navbar">
@@ -2822,14 +2838,14 @@ margin-right: 20px !important;
         <img src="https://civilprom.s3.eu-north-1.amazonaws.com/civilprom_logo_white.svg" alt="Logo">
         <div class="right-button">
           
-<button class="heyyou science" onclick="openMail()">Contact Mail</button>
+<button class="heyyou science" href="phone:+447723501018">Tel +44 7723 501018</button>
 
 <script>
 function openMail() {
     window.location.href = "mailto:mail@civilprom.com";
 }
 </script>         
-<button class="CTAlog science" onclick="openACC()">S'identifier</button>
+<button class="CTAlog science" onclick="openMail()">Contact Mail</button>
  <script> function openACC() { window.location.href = "/go"; } </script>
       </div>
     </div> </div> 
@@ -2853,7 +2869,7 @@ function openMail() {
 <button class="cageX gros fist" onclick="selectChoice('— Logiciel.', 'Lorem ipsum dolor sit amet.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
-<strong class="proximus">Logiciel</strong><br>
+<strong class="grit proximus">Logiciel</strong><br>
 <small class="terra"> Infogérance pour vos données et processus métiers.</small>
 </div>
 </button>   
@@ -2864,7 +2880,7 @@ function openMail() {
 <button class="cageX gros" onclick="selectChoice('— Système.', 'Lorem ipsum dolor sit amet.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
-<strong class="proximus">Système</strong><br>
+<strong class="grit proximus">Système</strong><br>
 <small class="terra">Fonctions spécifiques avec une interface embarquée.</small>
 </div>
 </button>    
@@ -2872,56 +2888,15 @@ function openMail() {
 <button class="cageX gros" onclick="selectChoice('— Plateforme.', 'Consectetur adipiscing elit.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
-<strong class="proximus">Plateforme</strong><br>
+<strong class="grit proximus">Plateforme</strong><br>
 <small class="terra">Connecter des utilisateurs autour d'une solution unique.</small>
 </div>
 </button>
-      
-<button class="cageX gros" onclick="selectChoice('— UI et UX.', 'Sed do eiusmod tempor.', this)">
-<img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
-<div>
-<strong class="proximus">UI et UX</strong><br>
-<small class="terra">Services créatifs pour l'accessibilité et l'expérience.</small>
-</div>
-</button>
-          
-<button class="cageX gros" onclick="handleSpecialChoice(this)">
-    <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
-    <div>
-        <strong class="proximus">Sports Systems</strong><br>
-        <small class="terra">Branche spécialisée avec une offre phygitale.</small>
-    </div>
-</button>
 
-<button class="cageX gros" onclick="handleSpecialChoice(this)">
-    <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
-    <div>
-        <strong class="proximus">Medical Systems</strong><br>
-        <small class="terra">Branche spécialisée pour des processus critiques.</small>
-    </div>
-</button>
 
       
 </div>
 
-          <script>
-const animateGradient = () => {
-    let angle = 0;
-    const cages = document.querySelectorAll('.cageX');
-    
-    if (!cages.length) return;
-    
-    const interval = setInterval(() => {
-        angle = (angle + 5) % 360; // Augmente l'angle rapidement
-        cages.forEach(cage => {
-            cage.style.setProperty('--gradient-angle', `${angle}deg`);
-        });
-    }, 50); // Rafraîchit toutes les 50ms
-};
-
-document.addEventListener("DOMContentLoaded", animateGradient);
-
-          </script>
        <div class="step2-input" id="step2">
 <input type="text" id="userInput" placeholder="Écrivez ici" 
        oninput="toggleSendButton()" onkeydown="handleEnter(event)">
