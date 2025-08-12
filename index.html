@@ -11,7 +11,7 @@
     <title>Civilprom — Moteur de vos synergies</title>
     <link
       rel="icon"
-      href="https://civilprom.s3.eu-north-1.amazonaws.com/favic.png"
+      href="https://civilprom.s3.eu-north-1.amazonaws.com/favicon_civilprom2026.png"
     />
     <link rel="canonical" href="civilprom.com" />
 
@@ -28,7 +28,7 @@
     />
     <meta
       property="og:image"
-      content="https://civilprom.s3.eu-north-1.amazonaws.com/metabanner.png"
+      content="https://civilprom.s3.eu-north-1.amazonaws.com/metabanner2025.png"
     />
     <meta
       name="twitter:card"
@@ -114,7 +114,7 @@
     font-family: "saasduoPAR" !important;
     font-weight: 100 !important;
     letter-spacing: -0.2px !important;
-    font-size: 18px !important;
+    font-size: 20px !important;
     cursor: default !important;
     align-self: center !important;
     word-wrap: break-word;
@@ -124,7 +124,7 @@
     margin-bottom: 10px;
     max-width: 80%;
     display: flex;
-    color: #fff;
+    color: #000;
     align-items: center;
     gap: 10px;
     margin-top: 45px;
@@ -174,7 +174,7 @@ display: grid;  margin-bottom: 40px;  margin-top: 30px;
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 15px 15px 15px;         
+            padding: 15px;         
             cursor: pointer;
             color: white;
         }
@@ -186,13 +186,13 @@ display: grid;  margin-bottom: 40px;  margin-top: 30px;
       
          
       .terra {
-    font-size: 16px !important;
-    line-height: 28px !important;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-    display: block;
+          font-size: 18px !important;
+          line-height: 28px !important;
+          padding-left: 5px;
+          padding-right: 5px;
+          text-align: center;
+          margin-bottom: 10px;
+          display: block;
 }
       
              
@@ -204,42 +204,69 @@ font-size: 22px !important;
       
 /* Effet hover : bordure devient jaune */
 .cageX:hover {
-      transition-duration: 0.3s !important;
-    color: #e8ff7a !important; /* Texte devient jaune */
-    box-shadow: 0 0 0px 7px #e8ff7a1f; /* Effet de glow */
-    border: 1px solid #e8ff7a; /* Bordure jaune */
+    transition-duration: 0.3s !important;
+    box-shadow: none;
+    border: none;
+    transform: scale(1.025);
+    transition: transform 0s;
+    background: color(display-p3 0.81 0.89 1 / 0.43);
+
 }
 
-/* Désactivation du gradient au hover */
-.cageX:hover::before {
-    display: none;
-}
-      
 
 
    .cageX {
-    position: relative;
-    background: #00415900 !important;
-    color: #004159 !important;
-    font-family: "saasduoPAR";
-    font-weight: 100;
-    letter-spacing: -0.2px;
-    padding: 12px 24px;
-    display: inline-flex
-;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1;
-    border: 1px solid #0041592b;
+       position: relative;
+           font-family: "saasduoPAR";
+           font-weight: 100;
+           letter-spacing: -0.2px;
+           padding: 12px 24px;
+           display: inline-flex
+       ;
+           align-items: center;
+           justify-content: center;
+           border-radius: 15px;
+           text-decoration: none;
+           font-size: 16px;
+           transition: transform 0.3s ease-in-out;
+           z-index: 1;
+           border: none !important;
 }
 
+
+
+           .blueSTICK {
+                   background: color(display-p3 0.22 0.51 0.95) !important;
+                   color: #fff !important;
+        }
+
+        .blueSTICK:hover {
+            box-shadow: 0 0 0px 7px #1a93ff30;
+        }
+
+
+           .purpleSTICK {
+                   background: color(display-p3 0.18 0.06 0.31) !important;
+                   color: #fff !important;
+        }
+
+        .purpleSTICK:hover {
+            box-shadow: 0 0 0px 7px #320c5224;
+        }
+
+
+           .greenSTICK {
+                   background: color(display-p3 0.25 0.7 0.54) !important;
+                   color: #fff !important;
+        }
+        .greenSTICK:hover {
+            box-shadow: 0 0 0px 7px #00b6873b;
+        }
+
    .grit {
-    font-size: 26px !important;
+    font-size: 28px !important;
     font-family: "grit"!important;
+       font-weight: 100 !important;
 
 
     }
@@ -282,10 +309,10 @@ display: none;
         .step2-input input {
     flex: 1;
     text-align: center !important;
-    background-color: #00000000 !important;
-    color: white !important;
+    background-color: #fff !important;
+    color: black !important;
     padding: 8px 20px 7px 20px !important;
-    border: 1px solid #e8ff7a !important;
+    border: 1px solid #8484844a !important;
     cursor: pointer !important;
     font-family: "saasduoPAR" !important;
     font-weight: 100 !important;
@@ -299,15 +326,14 @@ display: none;
         }
 
 .step2-input input::placeholder {
-    color: white !important; /* Couleur du placeholder */
+    color: black !important; /* Couleur du placeholder */
     opacity: 1; /* Assure que la couleur est bien visible sur certains navigateurs */
 }
 
       
       .step2-input input:hover {
     transition-duration: 0s !important;
-    box-shadow: 0 0 0px 7px #e8ff7a1f;
-    border: 1px solid #e8ff7a;
+    box-shadow: 0 0 0px 7px #b0b0b01c;
 }
 
         .step2-input button {
@@ -349,11 +375,11 @@ display: none;
 }
       
                   .mfa3 {
-    background: linear-gradient(45deg, #703bac, #b27cf1) ;
-              font-family: "saasduoPAR" !important;
-    font-weight: 100 !important;
-    letter-spacing: -0.2px !important;
-    font-size: 18px !important;
+                      background: white;
+                      font-family: "saasduoPAR" !important;
+                      font-weight: 100 !important;
+                      letter-spacing: -0.2px !important;
+                      font-size: 18px !important;
 }
       
                   .mfa4 {
@@ -385,31 +411,31 @@ display: none;
       
             .mfa3:hover {
     transition-duration: 0s !important;
-    box-shadow: 0 0 0px 7px #e8ff7a1f;
+    box-shadow: 0 0 0px 7px #bababa2b;
 }
       
       
             .mfa4:hover {
     transition-duration: 0s !important;
-    box-shadow: 0 0 0px 7px #e8ff7a1f;
+    box-shadow: 0 0 0px 7px #bababa2b;
 }
       
       
             .mfa5:hover {
     transition-duration: 0s !important;
-    box-shadow: 0 0 0px 7px #e8ff7a1f;
+    box-shadow: 0 0 0px 7px #bababa2b;
 }
       
       
       
       .step3-buttons button {
-    padding: 10px 15px;
-    border: 1px solid #703bac;
-  border-radius: 80px;
-    cursor: pointer;
-    color: white;
-    transition: background 0.3s;
-            white-space: nowrap; /* Empêche le texte des boutons de se couper */
+          padding: 10px 15px;
+          border: 1px solid #ececec;
+          border-radius: 80px;
+          cursor: pointer;
+          color: #000000;
+          transition: background 0.3s;
+          white-space: nowrap;
 
 }
 
@@ -417,14 +443,14 @@ display: none;
     transform: scale(1.06);
     background: #000000;
     color: #fff !important;
-    border: 1px solid #e8ff7a;
+    border: 1px solid #000000;
   border-radius: 80px;
 }
 
       
       .step3-buttons button.selected:hover {
     transition-duration: 0s !important;
-    box-shadow: 0 0 0px 7px #e8ff7a1f;
+    box-shadow: 0 0 0px 7px #bababa2b;
 }
       
       .step3-input {
@@ -494,10 +520,10 @@ background-color: color(display-p3 0 0.50588 0.94902) !important;
     align-items: center;
     gap: 10px;
 padding: 10px 15px;
-    border: none;
+    border: 1px solid #ececec;
     border-radius: 20px;
     cursor: pointer;
-    color: white;
+    color: black;
     transition: background 0.3s;
     white-space: nowrap;
   
@@ -523,7 +549,7 @@ padding: 10px 15px;
       
             .tech2 {
 
-          background: linear-gradient(45deg, #0e9a7a, #17c89e);
+          background: white;
     font-family: "saasduoPAR" !important;
     font-weight: 100 !important;
     letter-spacing: -0.2px !important;
@@ -531,8 +557,8 @@ padding: 10px 15px;
 }
   
             .tech2:hover {
-    transition-duration: 0s !important;
-    box-shadow: 0 0 0px 7px #e8ff7a1f;
+                transition-duration: 0s !important;
+                box-shadow: 0 0 0px 7px #bababa2b;
 }
       
             .tech3 {
@@ -574,10 +600,10 @@ padding: 10px 15px;
     align-items: center;
     gap: 14px;
     padding: 10px 15px;
-    border: none;
+    border: 1px solid #ececec;
     border-radius: 20px;
     cursor: pointer;
-    color: white;
+    color: black;
     transition: background 0.3s;
     white-space: nowrap;
 }
@@ -585,7 +611,7 @@ padding: 10px 15px;
 
 
       .compa1 {
-    background: linear-gradient(45deg, #a54b22, #fb8a3c);
+    background: white;
     font-family: "saasduoPAR" !important;
     font-weight: 100 !important;
     letter-spacing: -0.2px !important;
@@ -593,8 +619,8 @@ padding: 10px 15px;
 }
       
       .compa1:hover {
-    transition-duration: 0s !important;
-    box-shadow: 0 0 0px 7px #e8ff7a1f;
+          transition-duration: 0s !important;
+          box-shadow: 0 0 0px 7px #bababa2b;
 }
             .compa2 {
     background: linear-gradient(45deg, #9ba220, #e6f12c);
@@ -622,17 +648,17 @@ padding: 10px 15px;
 }
 
       .chat-bubble.right  {
+          font-weight: 100 !important;
             line-height: 28px;
     margin-right: auto;
     background-color: transparent;
-    color: #004159 !important;
+    color: #000 !important;
     padding: 0px !important;
     border: 0px solid #ffffffba !important;
     cursor: default !important;
     font-family: "saasduoPAR" !important;
-    font-weight: 100 !important;
     letter-spacing: -0.2px !important;
-    font-size: 18px !important;
+    font-size: 20px !important;
     border-radius: 15px !important;
     border-top-left-radius: 15px !important;
     border-top-right-radius: 15px !important;
@@ -663,8 +689,8 @@ padding: 10px 15px;
 }
 
 .loader {
-border: 1px solid #ffffff38;
-    border-top: 1px solid #e8ff7a;
+border: 1px solid #8484842b;
+    border-top: 1px solid color(display-p3 0 0.50588 0.94902);
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -690,10 +716,10 @@ border: 1px solid #ffffff38;
   max-width: 253px;
   width: 98%;
 text-align: center !important;
-    background-color: #00000000 !important;
-    color: white !important;
+    background-color: #fff !important;
+    color: black !important;
     padding: 8px 20px 7px 20px !important;
-    border: 1px solid #e8ff7a !important;
+    border: 1px solid #8484844a !important;
     cursor: pointer !important;
     font-family: "saasduoPAR" !important;
     font-weight: 100 !important;
@@ -707,7 +733,7 @@ text-align: center !important;
 }
       
       #finalForm input::placeholder {
-color: white; 
+color: black; 
       }
 
 #finalForm button {
@@ -728,15 +754,14 @@ color: white;
 }
       
       #finalForm input:hover {
-    transition-duration: 0s !important;
-    color: #white !important;
-    box-shadow: 0 0 0px 7px #e8ff7a1f;
+            transition-duration: 0s !important;
+            box-shadow: 0 0 0px 7px #b0b0b01c;
     border: 1px solid #e8ff7a;
 }
 
       #finalForm button:hover {
-    box-shadow: 0 0 0px 7px #008eff38;
-    cursor: pointer;
+          transition-duration: 0s !important;
+          box-shadow: 0 0 0px 7px #008eff38;
     transition-duration: 0s;
 }
       .typing {
@@ -886,6 +911,10 @@ text-align: center;
         }
 
 
+        strong {
+            font-weight: 100 !important;
+        }
+        
         .text {
             text-align: left;
     font-weight: 400;
@@ -1437,9 +1466,9 @@ text-align: center;
             padding: 20px 10px 20px 0px;
         }
         .navbar img {
-    height: 46px;
-    margin-top: -1px;
-    margin-bottom: -8px;
+            height: 53px;
+            margin-top: 0px;
+            margin-bottom: -10px;
         }
       
       
@@ -1463,7 +1492,7 @@ text-align: center;
       
       .CTAlog {
     text-align: center !important;
-    background-color: color(display-p3 0 0.50588 0.94902) !important;
+    background-color: color(display-p3 0 0 0) !important;
     color: #fff !important;
     padding: 8px 20px 7px 20px !important;
     cursor: pointer !important;
@@ -1475,11 +1504,11 @@ text-align: center;
     margin-left: 14px !important;
     height: 54px !important;
     z-index: 999999999 !important;
-            border: 1px solid color(display-p3 0 0.50588 0.94902) !important;
+            border: 1px solid color(display-p3 0 0 0) !important;
 }
       
       .CTAlog:hover {
-    box-shadow: 0 0 0px 7px #008eff38;
+    box-shadow: 0 0 0px 7px #0000001c;
     cursor: pointer;
     transition-duration: 0s;
 }
@@ -2361,7 +2390,7 @@ width: 100%;
       .sous-titreinfoable {
         margin-top: 10px;
         text-align: left;
-        font-size: 16px !important;
+        font-size: 18px !important;
         font-family: "saasduoPAR" !important;
         letter-spacing: 0px;
         color: #fff;
@@ -2508,13 +2537,14 @@ box-shadow: 0 0 0px 7px #e8ff7a1f;
         }
             /* Conteneur de la barre */
         .load-bar {
+            display: none !important;
 position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 1px;
+    height: 2px;
     overflow: hidden;
-    background: #000000;
+    background: color(display-p3 0 0.50588 0.94902);
     margin-bottom: -50px;
         }
 
@@ -2525,17 +2555,17 @@ position: absolute;
             left: 0;
             width: 100%;
             height: 100%;
-            background: #000; /* Première vague qui recouvre */
+            background: color(display-p3 0 0.50588 0.94902); /* Première vague qui recouvre */
             animation: waveMove 1s linear infinite;
         }
 
         .wave:nth-child(2) {
-            background: #e8ff7a; /* Seconde vague qui recouvre */
+            background: #08efff; /* Seconde vague qui recouvre */
             animation-delay: 0.75s;
         }
 
         .wave:nth-child(3) {
-            background: #000; /* Troisième vague qui recouvre */
+            background: color(display-p3 0 0.50588 0.94902); /* Troisième vague qui recouvre */
             animation-delay: 1.5s;
         }
 
@@ -2559,7 +2589,7 @@ position: absolute;
     padding: 0px;
     margin-top: -120px;
     min-height: 150px;
-    background: linear-gradient(180deg, #e2f7ff, #ffffff);
+    background: color(display-p3 1 1 1) !important;
         min-height: 480px !important;
             padding-bottom: 55px !important;
 }
@@ -2659,15 +2689,44 @@ margin-right: 20px !important;
 }
 
 
-      
+              .biscotte {
+                  z-index: 1000000000000000000000000000000000;
+                  position: sticky;
+        }
+        .cvlprm-link-wrapper {
+          text-decoration: none;
+          display: block;
+            cursor: pointer !important;
+        }
+
+
+       .nostyle {
+              text-decoration: none;
+
+        }
+        
     </style>
 </head>
 <body>
+
+      <div class="biscotte">
    <div class="load-bar">
         <div class="wave"></div>
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
+
+
+
+
+
+          
+              <div class="cvlprm-banner">
+                <span class="cvlprm-text">
+                Vous recherchez peut-être notre branche:<a href="/studios" class="nostyle" ><span  class="cvlprm-link">CommsX</span></a>
+                </span> 
+              </div>
+            </div>
   
   <script>
     
@@ -2740,12 +2799,12 @@ margin-right: 20px !important;
     <div class="sticky-cta-bar" id="maDiv">
       <div class="cta-text">
         <div class="sous-titreinfoable lazyload">
-          Nous utilisons des cookies et des technologies similaires pour mémoriser vos préférences et comprendre votre parcours. Nous stockons des données dépersonnalisées pour obtenir des statistiques et améliorer la performance de notre site — En utilisant 
+Nous stockons des données dépersonnalisées pour obtenir des statistiques et améliorer la performance de notre site — En utilisant 
           <a href="/" class="linkcookies">civilprom.com</a>, vous acceptez l'utilisation de tous les cookies ainsi que notre 
           <a target="_blank" href="/privacy" class="linkcookies"
             >politique de confidentialité.</a
           >
-         Nous collectons des informations personnelles vous concernant uniquement lorsque vous complétez notre formulaire.
+         Nous collectons des données personnelles uniquement lorsque le visiteur complète le formulaire d'onboarding ou de contact.
         </div>
       </div>
       <button class="fermerinfoable lazyload" onclick="masquerDiv()">
@@ -2788,14 +2847,9 @@ margin-right: 20px !important;
     </script>
   
 
-    <div class="cvlprm-banner">
-    <span class="cvlprm-text">Plus d'informations sur Kinesis, notre branche média & art<a href="https://g2.ai/try" class="cvlprm-link">Plus d'informations</a>
-    </span>
-  </div>
-  
    <style>
     .cvlprm-banner {
-    background-color: #004159;
+    background-color: color(display-p3 0 0 0) !important;
     color: #ffffff;
       cursor: default !important;
     font-family: "saasduoPAR" !important;
@@ -2812,15 +2866,16 @@ margin-right: 20px !important;
     }
 
     .cvlprm-link {
-      color: #00f0ff;
+      color: color(display-p3 0.93 1 0.55);
       text-decoration: none;
-      font-weight: bold;
+        font-weight: 100 !important;
       margin-left: 5px;
       transition: color 0.3s ease;
+        cursor: pointer !important;
     }
 
     .cvlprm-link:hover {
-      color: #ffffff;
+      color: color(display-p3 0.93 1 0.55);
       text-decoration: underline;
     }
   </style>
@@ -2835,7 +2890,7 @@ margin-right: 20px !important;
       <div class="wrestling">
     <div class="navbar">
           
-        <img src="https://civilprom.s3.eu-north-1.amazonaws.com/civilprom_logo_white.svg" alt="Logo">
+        <img src="https://civilprom.s3.eu-north-1.amazonaws.com/civilpromlogo2026.svg" alt="Logo">
         <div class="right-button">
           
 <button class="heyyou science" href="phone:+447723501018">Tel +44 7723 501018</button>
@@ -2866,7 +2921,7 @@ function openMail() {
       
       
       
-<button class="cageX gros fist" onclick="selectChoice('— Logiciel.', 'Lorem ipsum dolor sit amet.', this)">
+<button class="blueSTICK cageX gros fist" onclick="selectChoice('— Logiciel.', 'Lorem ipsum dolor sit amet.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
 <strong class="grit proximus">Logiciel</strong><br>
@@ -2877,7 +2932,7 @@ function openMail() {
       
       
       
-<button class="cageX gros" onclick="selectChoice('— Système.', 'Lorem ipsum dolor sit amet.', this)">
+<button class="purpleSTICK cageX gros" onclick="selectChoice('— Système.', 'Lorem ipsum dolor sit amet.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
 <strong class="grit proximus">Système</strong><br>
@@ -2885,7 +2940,7 @@ function openMail() {
 </div>
 </button>    
       
-<button class="cageX gros" onclick="selectChoice('— Plateforme.', 'Consectetur adipiscing elit.', this)">
+<button class="greenSTICK cageX gros" onclick="selectChoice('— Plateforme.', 'Consectetur adipiscing elit.', this)">
 <img src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" alt="Icon">
 <div>
 <strong class="grit proximus">Plateforme</strong><br>
@@ -2963,7 +3018,7 @@ function openMail() {
 <div id="finalForm" style="flex-direction: column; gap: 15px; align-items: center;">
    <form class="porto">
      
-  <label id="formLabel" style="line-height: 28px; margin-right: auto; background-color: transparent; color: #fff !important; padding: 0px !important; cursor: default !important; font-family: saasduoPAR !important; font-weight: 100 !important; letter-spacing: -0.2px !important; font-size: 18px !important; margin-left: auto; margin-top: 10px; margin-bottom: 20px; text-align: center; display: block; width: 100%; align-self: center !important;">Parfait! Votre projet demande une attention particulière d'un spécialiste ; pourriez-vous ajouter vos coordonnées pour vous contacter.</label>
+  <label id="formLabel" style="line-height: 28px; margin-right: auto; background-color: transparent; color: #000 !important; padding: 0px !important; cursor: default !important; font-family: saasduoPAR !important; font-weight: 100 !important; letter-spacing: -0.2px !important; font-size: 20px !important; margin-left: auto; margin-top: 10px; margin-bottom: 20px; text-align: center; display: block; width: 100%; align-self: center !important;">Parfait! Pourriez-vous ajouter vos coordonnées pour vous contacter. </label>
     <input type="email" name="email1" placeholder="Votre email" required>
     <input type="tel" name="tel1" placeholder="Votre téléphone" required>
     <button type="submit" onclick="submitFinalForm()">Valider</button>
@@ -3235,7 +3290,7 @@ function selectStep5Choice(choice, subtitle) {
 
       
 window.onload = function () {
-showTypingEffect('Pour quelle solution souhaitez-vous nous contacter.', () => {
+showTypingEffect('Pour quelle solution souhaitez-vous nous contacter?', () => {
     let introBubble = document.querySelector('.chat-bubble.right:last-child');
     introBubble.id = "introBubble"; // Ajoute un identifiant pour la retrouver facilement
         setTimeout(() => {
@@ -3256,7 +3311,7 @@ function submitFinalForm() {
 
     // Supprimer les champs input et bouton submit
     finalForm.innerHTML = `
-        <label style="line-height: 28px; margin-right: auto; background-color: transparent; color: #fff !important; padding: 0px !important; cursor: default !important; font-family: saasduoPAR !important; font-weight: 100 !important; letter-spacing: -0.2px !important; font-size: 18px !important; margin-left: auto; margin-top: 10px; margin-bottom: 20px; text-align: center; display: block; width: 100%; align-self: center !important;">Vous avez terminé! Votre demande est enregistrée, nous allons vous contacter.</label>
+        <label style="line-height: 28px; margin-right: auto; background-color: transparent; color: #000 !important; padding: 0px !important; cursor: default !important; font-family: saasduoPAR !important; font-weight: 100 !important; letter-spacing: -0.2px !important; font-size: 20px !important; margin-left: auto; margin-top: 10px; margin-bottom: 20px; text-align: center; display: block; width: 100%; align-self: center !important;">On s'en occupe! Votre demande est enregistrée, nous allons vous contacter. Vous pouvez aussi nous appeler au +44 7723 501018 ou nous écrire à mail@civilprom.com.</label>
         <button onclick="restartForm()">Recommencer</button>
     `;
 }
@@ -3961,11 +4016,9 @@ margin-top: -5px;
 }
               
               .button-CC1case99:hover {
-    box-shadow: 0 0 0px 7px #008eff38;
-    cursor: pointer;
-    transition-duration: 0s;
-    background-color: #f6f8fa;
-}
+
+                      transition-duration: 0s;
+                  }
             
               
             .customersidentity    {
@@ -4028,7 +4081,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
     
-    <img class="customersidentity" src="https://civilprom.s3.eu-north-1.amazonaws.com/clients.svg" alt="Image 1">
+    <img class="customersidentity" src="https://civilprom.s3.eu-north-1.amazonaws.com/CustomersV2CP.svg" alt="Image 1">
     
 </div>
   
@@ -4402,7 +4455,8 @@ margin-bottom: 45px;
     height: auto;
                   text-align: left;
     margin-left: auto;
-                  background-color: color(display-p3 0 0 0) !important;
+                    background-color: #000 !important;
+                    border-top: 1px solid #ededed;
                   margin-bottom: -50px;
                   padding-bottom: 15px;
                    padding-top: 5px;
@@ -4412,7 +4466,7 @@ margin-bottom: 45px;
           width: 98%;
           max-width: 1200px;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     font-family: "saasduoPAR" !important;
     line-height: 26px;
@@ -4428,7 +4482,7 @@ margin-bottom: 45px;
         
         .cristalinefooterlink {
     color: #e8ff7a !important;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     font-family: "saasduoPAR" !important;
     cursor: pointer;
@@ -4469,7 +4523,7 @@ margin-bottom: 45px;
           height: 5px;
 }
                                .seal {
-   width: 300px ;
+   width: 170px ;
           margin-top: 35px;
 }
         
@@ -4491,13 +4545,13 @@ margin-bottom: 45px;
             <a href="https://policies.google.com/privacy" class="cristalinefooterlink" target="_blank">Politique de Confidentialité de Google</a>
             et les
             <a href="https://policies.google.com/terms" class="cristalinefooterlink" target="_blank">
-           Conditions d'Utilisation de Google</a> s'appliquent. Autres pages et contenus connexes ; page <a href="https://www.linkedin.com/company/civilprom/" class="cristalinefooterlink" target="_blank">Linkedin</a> de la maison mère CivilProm, lecture de nos <a href="/terms" class="cristalinefooterlink" target="_blank">conditions générales,</a> consulter nos <a href="https://www.linkedin.com/company/civilprom/jobs/" class="cristalinefooterlink" target="_blank">offres d'emploi,</a> open the page language <a href="/uk" class="cristalinefooterlink" target="_blank">English UK.</a><br><br>
-           (1) Facturation mensuelle à l'issue d'une période de programmation de votre solution. Des frais de création uniques s'appliquent en fonction du projet.
+           Conditions d'Utilisation de Google</a> s'appliquent. Autres pages et contenus connexes ; notre page <a href="https://www.linkedin.com/company/civilprom/" class="cristalinefooterlink" target="_blank">Linkedin</a>, nos <a href="https://conditions9821.civilprom.com/" class="cristalinefooterlink" target="_blank">conditions générales,</a> nos <a href="https://www.linkedin.com/company/civilprom/jobs/" class="cristalinefooterlink" target="_blank">offres d'emploi.</a> Open the page language <a href="/eng" class="cristalinefooterlink" target="_blank">English.</a><br><br>
+           (1) Facturation mensuelle à l'issue d'une période de programmation de votre solution, le seuil minimum de facturation est de £90 hors taxes. Outre la vie de la solution, des frais uniques lors de création s'appliquent en fonction du projet, à partir de £900 hors taxes.
                        <br><br>
-          Pour contacter Civilprom ; écrivez par email à <a href="mailto:mail@civilprom.com" class="cristalinefooterlink" >mail@civilprom.com</a> ou appelez le <a href="tel:+447723501018" class="cristalinefooterlink">+44 7723 501018.</a> Civilprom vous accueille du Lundi au Vendredi de 10h à 12h puis de 14h à 18h à Londres (EC1V 2NX). Veuillez nous contacter pour des informations relatives à la presse ou pour recevoir un kit de communication — Tous droits réservés Copyright © 2024 CIVILPROM LTD, entreprise enregistrée auprès de la Companies House sous le n° 13344127 (n° TVA 492849830).<br><br>
+          Pour contacter Civilprom ; écrivez par email à <a href="mailto:mail@civilprom.com" class="cristalinefooterlink" >mail@civilprom.com</a> ou appelez le <a href="tel:+447723501018" class="cristalinefooterlink">+44 7723 501018.</a> Vous souhaitez nous rendre visite, Civilprom vous accueille du Lundi au Vendredi de 10h à 12h puis de 14h à 18h à Londres (EC1V 2NX). Veuillez nous contacter pour des informations relatives à la presse ou pour recevoir un kit de communication — Tous droits réservés Copyright © 2024 CIVILPROM LTD, entreprise enregistrée auprès de la Companies House <a href="https://find-and-update.company-information.service.gov.uk/company/13344127" class="cristalinefooterlink" target="_blank">n° 13344127 (TVA 492849830).</a><br><br>
             
-            Clauses de non-responsabilité ; Civilprom se décharge de toute mauvaise utilisation des utilisateurs finaux et des contenus émis sur les solutions. Aucune restriction quantitative, politique, géographique ou thématique ne s'applique aux activités des clients — La sécurité des utilisateurs finaux sur les solutions est une priorité dans nos opérations, conformément aux bonnes pratiques et aux exigences juridiques locales au périmètre de fonctionnement du produit client. Des actions de modération sur la base du signalement peuvent être effectuées sans prévention par Civilprom. Les infrastructures et données des solutions sont compartimentées et étanches pour assurer la protection et la confidentialité rigoureuse des propriétés techniques et informatives de nos clients.
-            <br><img class="seal" src="https://civilprom.s3.eu-north-1.amazonaws.com/what8.svg" alt="Logo">   
+Notions juridiques — Clauses de non-responsabilité ; Civilprom se décharge de toute mauvaise utilisation des utilisateurs finaux et des contenus émis sur les solutions. Aucune restriction quantitative, politique, géographique ou thématique ne s'applique aux activités des clients. La sécurité des utilisateurs finaux sur les solutions est une priorité dans nos opérations, conformément aux bonnes pratiques et aux exigences juridiques locales au périmètre de fonctionnement du produit client. Des actions de modération sur la base du signalement peuvent être effectuées sans prévention par Civilprom. Les infrastructures et données des solutions sont compartimentées et étanches pour assurer la protection et la confidentialité rigoureuse des propriétés techniques et informatives de nos clients.
+            <br><img class="seal" src="https://civilprom.s3.eu-north-1.amazonaws.com/civilpromlogo2026_sober.svg" alt="Logo">   
             
 </p>
           
