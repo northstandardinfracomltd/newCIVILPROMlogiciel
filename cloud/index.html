@@ -236,7 +236,7 @@
 
 
  .button-CC1case99 {
-    width: 100%;
+    width: auto;
     max-width: 205px;
     text-align: center !important;
     background-color: #3030ff !important;
@@ -253,7 +253,7 @@
     height: 56px;
     padding-left: 23px;
     padding-right: 23px;
-    padding-top: 10px;
+    padding-top: 11px;
         padding-bottom: 11px;
     z-index: 999999999;
 margin-top: 25px;
@@ -366,9 +366,7 @@ box-shadow: 0 0 0px 7px #6f8cff29;
 <body>
 
 
-<div class="top-info">
-  <p class="infoTEXT">Switch to English website</p>
-</div>
+
 <div class="nav-bar" id="navBar">
     <img src="https://civilprom.s3.eu-north-1.amazonaws.com/c_black.svg" alt="Logo">
     <span class="migos">Solutions</span>
@@ -381,10 +379,82 @@ box-shadow: 0 0 0px 7px #6f8cff29;
 
 <div class="content">
     <h1 class="ctitle">Cloud</h1>
-    <p class="cnav">Art est la branche graphique de Civilprom, spécialisée dans la création d’identités visuelles, de supports documentaires institutionnels, éducatifs et d’entreprise, de dessins industriels et techniques, ainsi que d’illustrations originales. Elle conçoit également des composants UI, notamment en lien direct avec nos autres branches logicielles et vidéo.</p>
-<button onclick="openMail()" class="button button-CC1case99">Nous contacter</button>
-<br><br>
+    <p class="cnav">Cloud est la branche logiciels, systèmes et plateformes de Civilprom, spécialisée dans l’intégration de données et de processus métiers. Civilprom Cloud édite des solutions personnalisées pour offrir des expériences uniques, simples et agréables, intégrant des fonctionnalités spécifiques. Nos produits répondent à des problématiques d’usage complexes, souvent à l’interface entre le physique et le digital.</p>
+<a href="mailto:mail@civilprom.com">
+  <button class="button button-CC1case99">En savoir plus</button>
+</a><br><br>
+  <div class="image-containerX">
+    <img src="https://civilprom.s3.eu-north-1.amazonaws.com/civilprom_cloud.png" alt="Civilprom Art">
+  </div>
+
+  <style>
+        .image-containerX {
+      text-align: center;   /* centre l'image */
+      margin-top: 20px;
+    }
+
+    .image-containerX img {
+      max-width: 100%;   /* l'image s'adapte à la largeur de la page */
+      height: auto;      /* garde les proportions */
+      border-radius: 18px; /* coins arrondis optionnels */
+    }
+
+  </style>
 </div>
+
+
+<div class="pagedrop">
+    <p class="cnavdrop">Pour contacter la branche Cloud de Civilprom, veuillez envoyer un email à <a href="mailto:cloud@civilprom.com" class="TERROR">cloud@civilprom.com</a> ou appeler le <a href="tel:+447723501018" class="TERROR">+44 7723 501018</a>. Nous collectons et stockons des données dépersonnalisées pour obtenir des statistiques et améliorer la performance de notre site — En utilisant <a href="https://civilprom.com/" class="TERROR">civilprom.com</a>, vous acceptez l'utilisation de tous les cookies ainsi que notre politique de confidentialité. Pour plus d’informations, veuillez consulter notre charte de <a href="/safety" class="TERROR">Sécurité</a>, notre Politique de <a href="/privacy" class="TERROR">Confidentialité</a> et nos <a href="/terms" class="TERROR">Conditions</a>.</p>
+    <img class="logodrop" src="https://civilprom.s3.eu-north-1.amazonaws.com/civilpromlogo2026_sober.svg" alt="Logo">
+    <br><br>
+</div>
+
+<style>
+
+.pagedrop {
+  margin-top: 20px;
+  padding: 20px; 
+  border-top: 0px solid transparent;
+  background: rgb(0, 0, 0);
+  padding-bottom: 0px !important;
+  border-radius: 0px;
+  text-align: center;
+
+}
+
+.logodrop  {
+ margin-right: auto;
+ margin-left: auto;
+ max-width: 150px;
+}
+
+    .cnavdrop {
+           font-family: "Civilprom" ;
+    font-weight: 100 !important;
+    letter-spacing: 0px !important;
+    font-size: 16px !important;
+    cursor: default !important;
+    line-height: 28px;
+       color: white;
+       margin-bottom: 10px;
+       text-align: center;
+       margin-top: 20px;
+       padding-left: 10px; 
+       padding-right: 10px;
+    }
+
+.TERROR {
+color: #1befbb;
+    }
+
+    .TERROR:hover {
+color: #1befbb !important;
+text-decoration: underline;
+    }
+    
+</style>
+
+
 
 <script>
 const navBar = document.getElementById('navBar');
