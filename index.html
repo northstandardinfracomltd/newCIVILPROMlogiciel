@@ -96,7 +96,7 @@
         display: flex;
         align-items: center;
         background: #fff;
-        border-bottom: 1px solid #cfd4dc;
+        border-bottom: 1px solid #eaeaea;
         padding: 6px 12px;
         overflow-x: auto;
         white-space: nowrap;
@@ -124,7 +124,7 @@
         padding: 8px 16px;
         text-decoration: none;
         color: #000000;
-        border: 1px solid #cfd4dc;
+        border: 1px solid #eaeaea;
         transition: background 0.2s;
 
                    font-family: "Civilprom" ;
@@ -176,12 +176,11 @@
         background: linear-gradient(to left, rgba(250,250,250,1), rgba(250,250,250,0));
         opacity: 0;
     }
-    .fade-left::before { opacity: 1; }
-    .fade-right::after { opacity: 1; }
 
-    /* Contenu */
     .content {
         padding: 30px;
+            max-width: 1000px;
+    margin: auto;
         
     }
     .content h1 {
@@ -375,13 +374,29 @@ box-shadow: 0 0 0px 7px #6f8cff29;
     <a href="/video" class="nav-button">Video</a>
     <a href="/devo" class="nav-button">Devo</a>
         <a href="/facilities" class="nav-button">Facilities</a>
+        <a href="/#"><span class="paraXC migos">English</span></a>
+<style>
+      .paraXC {
+color: #c3c3d5 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+    }
+
+          .paraXC:hover {
+color: #3030ff !important
+    }
+a {
+  text-decoration: none;
+}
+
+</style>
 </div>
 
 <div class="content">
     <h1 class="ctitle">Cloud</h1>
-    <p class="cnav">Cloud est la branche logiciels, systèmes et plateformes de Civilprom, spécialisée dans l’intégration de données et de processus métiers. Civilprom Cloud édite des solutions personnalisées pour offrir des expériences uniques, simples et agréables, intégrant des fonctionnalités spécifiques. Nos produits répondent à des problématiques d’usage complexes, souvent à l’interface entre le physique et le digital.</p>
-<a href="mailto:mail@civilprom.com">
-  <button class="button button-CC1case99">En savoir plus</button>
+    <p class="cnav">Cloud est la branche logiciels, systèmes et plateformes de Civilprom, spécialisée dans l’intégration de données et de processus métiers. Civilprom Cloud édite des solutions personnalisées pour offrir des expériences uniques, simples et agréables, intégrant des fonctionnalités spécifiques. Nos produits répondent à des problématiques d’usage complexes, souvent à l’interface entre le physique et le digital.<br><br>Pour plus d'informations sur Civilprom Cloud, veuillez télécharger le PDF de présentation disponible ci-dessous.</p>
+<a href="cloudPDFfr.civilprom.com">
+  <button class="button button-CC1case99">Télécharger</button>
 </a><br><br>
   <div class="image-containerX">
     <img src="https://civilprom.s3.eu-north-1.amazonaws.com/civilprom_cloud.png" alt="Civilprom Art">
